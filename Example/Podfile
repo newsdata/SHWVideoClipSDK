@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'SHWVideoClipSDK_Example' do
+  pod 'SHWVideoClipSDK', :path => '../'
+
+  target 'SHWVideoClipSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

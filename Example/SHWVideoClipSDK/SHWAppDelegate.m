@@ -7,12 +7,24 @@
 //
 
 #import "SHWAppDelegate.h"
+#import "ViewController.h"
+
+#import <SHWVideoClipSDK/SHWVideoClip.h>
 
 @implementation SHWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [SHWVideoClip loadSHWVideoClip];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    ViewController *rootVC = [[ViewController alloc] init];
+    UINavigationController *naviRoot = [[UINavigationController alloc]initWithRootViewController:rootVC];
+    rootVC.title = @"首页";
+    self.window.rootViewController = naviRoot;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

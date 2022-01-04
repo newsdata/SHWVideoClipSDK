@@ -24,6 +24,25 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		F46FED86278430EE002404B3 /* test1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F46FED81278430EE002404B3 /* test1.mp3 */; };
+		F46FED87278430EE002404B3 /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F46FED82278430EE002404B3 /* test.mp3 */; };
+		F46FED88278430EE002404B3 /* icon_hzw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F46FED83278430EE002404B3 /* icon_hzw.jpg */; };
+		F46FED89278430EE002404B3 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F46FED84278430EE002404B3 /* video1.mp4 */; };
+		F46FED8A278430EE002404B3 /* video2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F46FED85278430EE002404B3 /* video2.mp4 */; };
+		F46FED90278431F6002404B3 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46FED8C278431F5002404B3 /* EditViewController.xib */; };
+		F46FED91278431F6002404B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46FED8D278431F5002404B3 /* ViewController.m */; };
+		F46FED92278431F6002404B3 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46FED8F278431F6002404B3 /* EditViewController.m */; };
+		F46FED9727843205002404B3 /* EditCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46FED9427843205002404B3 /* EditCollectionViewCell.m */; };
+		F46FED9827843205002404B3 /* EditCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46FED9627843205002404B3 /* EditCollectionViewCell.xib */; };
+		F46FEDA32784485C002404B3 /* NotoColorEmojiCompat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F46FED9A2784485C002404B3 /* NotoColorEmojiCompat.ttf */; };
+		F46FEDA42784485C002404B3 /* zhankuqingkehuangyouti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F46FED9B2784485C002404B3 /* zhankuqingkehuangyouti.ttf */; };
+		F46FEDA52784485C002404B3 /* Emoji One Color.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F46FED9C2784485C002404B3 /* Emoji One Color.ttf */; };
+		F46FEDA62784485C002404B3 /* SourceHanSansCN-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F46FED9D2784485C002404B3 /* SourceHanSansCN-Heavy.ttf */; };
+		F46FEDA72784485C002404B3 /* zhankukuaileti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F46FED9E2784485C002404B3 /* zhankukuaileti.ttf */; };
+		F46FEDA82784485C002404B3 /* zhankuwenyiti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F46FED9F2784485C002404B3 /* zhankuwenyiti.ttf */; };
+		F46FEDA92784485C002404B3 /* pingfang.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F46FEDA02784485C002404B3 /* pingfang.ttf */; };
+		F46FEDAA2784485C002404B3 /* zhankuxiaoweiLOGO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F46FEDA12784485C002404B3 /* zhankuxiaoweiLOGO.ttf */; };
+		F46FEDAB2784485C002404B3 /* Alibaba-PuHuiTi-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F46FEDA22784485C002404B3 /* Alibaba-PuHuiTi-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06A111E9695F00EE12651D1A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		06A111E9695F00EE12651D1A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		35D2412139B0A02FE67E7021 /* Pods-SHWVideoClipSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWVideoClipSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SHWVideoClipSDK_Tests/Pods-SHWVideoClipSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C85B3C5CB283B0E8485D69D /* Pods-SHWVideoClipSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWVideoClipSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-SHWVideoClipSDK_Tests/Pods-SHWVideoClipSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		3D0A5DEADC037A6B5EAB4A51 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		3D0A5DEADC037A6B5EAB4A51 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SHWVideoClipSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHWVideoClipSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,10 +82,32 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93ACB913352C24010F6506C7 /* Pods-SHWVideoClipSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWVideoClipSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-SHWVideoClipSDK_Example/Pods-SHWVideoClipSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9DF978BEE9CA9262C8D0509F /* SHWVideoClipSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SHWVideoClipSDK.podspec; path = ../SHWVideoClipSDK.podspec; sourceTree = "<group>"; };
+		9DF978BEE9CA9262C8D0509F /* SHWVideoClipSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SHWVideoClipSDK.podspec; path = ../SHWVideoClipSDK.podspec; sourceTree = "<group>"; };
 		A06B99ED299663F52CF5964D /* Pods_SHWVideoClipSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHWVideoClipSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB59E123A0B0430E8B20DC7B /* Pods-SHWVideoClipSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWVideoClipSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-SHWVideoClipSDK_Example/Pods-SHWVideoClipSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F320E3DD7CD461F784E40ABB /* Pods_SHWVideoClipSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHWVideoClipSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46FED81278430EE002404B3 /* test1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test1.mp3; sourceTree = "<group>"; };
+		F46FED82278430EE002404B3 /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
+		F46FED83278430EE002404B3 /* icon_hzw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon_hzw.jpg; sourceTree = "<group>"; };
+		F46FED84278430EE002404B3 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
+		F46FED85278430EE002404B3 /* video2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.mp4; sourceTree = "<group>"; };
+		F46FED8B278431F5002404B3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F46FED8C278431F5002404B3 /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		F46FED8D278431F5002404B3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F46FED8E278431F5002404B3 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		F46FED8F278431F6002404B3 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		F46FED9427843205002404B3 /* EditCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCollectionViewCell.m; sourceTree = "<group>"; };
+		F46FED9527843205002404B3 /* EditCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCollectionViewCell.h; sourceTree = "<group>"; };
+		F46FED9627843205002404B3 /* EditCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditCollectionViewCell.xib; sourceTree = "<group>"; };
+		F46FED9A2784485C002404B3 /* NotoColorEmojiCompat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NotoColorEmojiCompat.ttf; sourceTree = "<group>"; };
+		F46FED9B2784485C002404B3 /* zhankuqingkehuangyouti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zhankuqingkehuangyouti.ttf; sourceTree = "<group>"; };
+		F46FED9C2784485C002404B3 /* Emoji One Color.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Emoji One Color.ttf"; sourceTree = "<group>"; };
+		F46FED9D2784485C002404B3 /* SourceHanSansCN-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceHanSansCN-Heavy.ttf"; sourceTree = "<group>"; };
+		F46FED9E2784485C002404B3 /* zhankukuaileti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zhankukuaileti.ttf; sourceTree = "<group>"; };
+		F46FED9F2784485C002404B3 /* zhankuwenyiti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zhankuwenyiti.ttf; sourceTree = "<group>"; };
+		F46FEDA02784485C002404B3 /* pingfang.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pingfang.ttf; sourceTree = "<group>"; };
+		F46FEDA12784485C002404B3 /* zhankuxiaoweiLOGO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zhankuxiaoweiLOGO.ttf; sourceTree = "<group>"; };
+		F46FEDA22784485C002404B3 /* Alibaba-PuHuiTi-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alibaba-PuHuiTi-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +144,6 @@
 				35D2412139B0A02FE67E7021 /* Pods-SHWVideoClipSDK_Tests.debug.xcconfig */,
 				3C85B3C5CB283B0E8485D69D /* Pods-SHWVideoClipSDK_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -147,6 +187,12 @@
 				6003F59C195388D20070C39A /* SHWAppDelegate.h */,
 				6003F59D195388D20070C39A /* SHWAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				F46FED9327843205002404B3 /* Views */,
+				F46FED8E278431F5002404B3 /* EditViewController.h */,
+				F46FED8F278431F6002404B3 /* EditViewController.m */,
+				F46FED8C278431F5002404B3 /* EditViewController.xib */,
+				F46FED8B278431F5002404B3 /* ViewController.h */,
+				F46FED8D278431F5002404B3 /* ViewController.m */,
 				6003F5A5195388D20070C39A /* SHWViewController.h */,
 				6003F5A6195388D20070C39A /* SHWViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
@@ -160,6 +206,12 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F46FED992784485C002404B3 /* font */,
+				F46FED83278430EE002404B3 /* icon_hzw.jpg */,
+				F46FED82278430EE002404B3 /* test.mp3 */,
+				F46FED81278430EE002404B3 /* test1.mp3 */,
+				F46FED84278430EE002404B3 /* video1.mp4 */,
+				F46FED85278430EE002404B3 /* video2.mp4 */,
 				6003F595195388D20070C39A /* SHWVideoClipSDK-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -197,6 +249,32 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		F46FED9327843205002404B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F46FED9427843205002404B3 /* EditCollectionViewCell.m */,
+				F46FED9527843205002404B3 /* EditCollectionViewCell.h */,
+				F46FED9627843205002404B3 /* EditCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F46FED992784485C002404B3 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				F46FED9A2784485C002404B3 /* NotoColorEmojiCompat.ttf */,
+				F46FED9B2784485C002404B3 /* zhankuqingkehuangyouti.ttf */,
+				F46FED9C2784485C002404B3 /* Emoji One Color.ttf */,
+				F46FED9D2784485C002404B3 /* SourceHanSansCN-Heavy.ttf */,
+				F46FED9E2784485C002404B3 /* zhankukuaileti.ttf */,
+				F46FED9F2784485C002404B3 /* zhankuwenyiti.ttf */,
+				F46FEDA02784485C002404B3 /* pingfang.ttf */,
+				F46FEDA12784485C002404B3 /* zhankuxiaoweiLOGO.ttf */,
+				F46FEDA22784485C002404B3 /* Alibaba-PuHuiTi-Medium.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,6 +287,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				790DD8C86A22632B6D4A3B20 /* [CP] Embed Pods Frameworks */,
+				16415F33AE9C4EA73A0640D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,6 +327,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "shicahgnshun-xhzy";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = R43737H5WP;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +340,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -277,9 +360,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F46FEDA62784485C002404B3 /* SourceHanSansCN-Heavy.ttf in Resources */,
+				F46FED88278430EE002404B3 /* icon_hzw.jpg in Resources */,
+				F46FED9827843205002404B3 /* EditCollectionViewCell.xib in Resources */,
+				F46FED89278430EE002404B3 /* video1.mp4 in Resources */,
+				F46FEDA42784485C002404B3 /* zhankuqingkehuangyouti.ttf in Resources */,
+				F46FEDA32784485C002404B3 /* NotoColorEmojiCompat.ttf in Resources */,
+				F46FEDAA2784485C002404B3 /* zhankuxiaoweiLOGO.ttf in Resources */,
+				F46FED90278431F6002404B3 /* EditViewController.xib in Resources */,
+				F46FEDA72784485C002404B3 /* zhankukuaileti.ttf in Resources */,
+				F46FEDAB2784485C002404B3 /* Alibaba-PuHuiTi-Medium.ttf in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				F46FEDA82784485C002404B3 /* zhankuwenyiti.ttf in Resources */,
+				F46FEDA92784485C002404B3 /* pingfang.ttf in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				F46FED87278430EE002404B3 /* test.mp3 in Resources */,
+				F46FED8A278430EE002404B3 /* video2.mp4 in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				F46FED86278430EE002404B3 /* test1.mp3 in Resources */,
+				F46FEDA52784485C002404B3 /* Emoji One Color.ttf in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +394,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16415F33AE9C4EA73A0640D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SHWVideoClipSDK_Example/Pods-SHWVideoClipSDK_Example-resources.sh",
+				"${PODS_ROOT}/../../SHWVideoClipSDK/Assets/SWFilterBundle.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SWFilterBundle.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SHWVideoClipSDK_Example/Pods-SHWVideoClipSDK_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		226EBF0E502417659464589A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -346,11 +463,37 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SHWVideoClipSDK_Example/Pods-SHWVideoClipSDK_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SHWVideoClipSDK/SHWVideoClipSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
+				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
+				"${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/QTEventBus/QTEventBus.framework",
+				"${BUILT_PRODUCTS_DIR}/RealReachability/RealReachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SHWVideoClipSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXCategoryView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QTEventBus.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealReachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -366,7 +509,10 @@
 			files = (
 				6003F59E195388D20070C39A /* SHWAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* SHWViewController.m in Sources */,
+				F46FED9727843205002404B3 /* EditCollectionViewCell.m in Sources */,
+				F46FED91278431F6002404B3 /* ViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				F46FED92278431F6002404B3 /* EditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +640,9 @@
 			baseConfigurationReference = AB59E123A0B0430E8B20DC7B /* Pods-SHWVideoClipSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R43737H5WP;
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = armv7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHWVideoClipSDK/SHWVideoClipSDK-Prefix.pch";
 				INFOPLIST_FILE = "SHWVideoClipSDK/SHWVideoClipSDK-Info.plist";
@@ -501,6 +650,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -510,6 +660,9 @@
 			baseConfigurationReference = 93ACB913352C24010F6506C7 /* Pods-SHWVideoClipSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R43737H5WP;
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = armv7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHWVideoClipSDK/SHWVideoClipSDK-Prefix.pch";
 				INFOPLIST_FILE = "SHWVideoClipSDK/SHWVideoClipSDK-Info.plist";
@@ -517,6 +670,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

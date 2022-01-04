@@ -1,13 +1,19 @@
+
+source 'git@code.aliyun.com:xhzy-ios/frameworkplatform.git'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
 
 platform :ios, '9.0'
 
 target 'SHWVideoClipSDK_Example' do
   pod 'SHWVideoClipSDK', :path => '../'
+  
+  pod 'TZImagePickerController'
 
   target 'SHWVideoClipSDK_Tests' do
     inherit! :search_paths
 
-    
   end
 end

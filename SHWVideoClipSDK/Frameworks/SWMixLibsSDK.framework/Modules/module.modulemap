@@ -1,0 +1,6 @@
+framework module SWMixLibsSDK {
+  umbrella header "SWMixLibsSDK.h"
+
+  export *
+  module * { export * }
+}

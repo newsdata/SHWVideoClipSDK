@@ -12,7 +12,7 @@ A videoClip sdk.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'shicahgnshun-xhzy' => 'shichangshun@xhzy' }
   s.source           = { :git => 'https://github.com/newsdata/SHWVideoClipSDK.git', :tag => s.version.to_s }
-  s.source           = { :path => '.' }
+  #s.source           = { :path => '.' }
 
   s.ios.deployment_target = '9.0'
 

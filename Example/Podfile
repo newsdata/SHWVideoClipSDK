@@ -1,8 +1,4 @@
 
-source 'git@code.aliyun.com:xhzy-ios/frameworkplatform.git'
-
-source 'https://github.com/CocoaPods/Specs.git'
-
 use_frameworks!
 
 platform :ios, '9.0'

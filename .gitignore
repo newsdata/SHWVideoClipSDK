@@ -27,4 +27,6 @@ Carthage/Build
 
 Pods/
 Podfile.lock
+SHWVideoClipSDK.xcworkspace/
+Example/SHWVideoClipSDK.xcworkspace/
 

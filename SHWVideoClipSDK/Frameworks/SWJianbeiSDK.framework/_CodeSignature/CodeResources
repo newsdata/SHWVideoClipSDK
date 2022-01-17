@@ -12,33 +12,9 @@
 		<data>
 		Y6YsZ/Uydtb1MCszWTCqUSlmhhw=
 		</data>
-		<key>Headers/BPBGMModel.h</key>
-		<data>
-		Bf29sz8BbDFt4LwVMj8TwzA/2gU=
-		</data>
-		<key>Headers/BPBaseRealmObject.h</key>
-		<data>
-		0poBTPhZSOzEUQ3S8ddFnvhY1Fo=
-		</data>
-		<key>Headers/BPCameraDefine.h</key>
-		<data>
-		sZkHWEInKSPYfE4ODQVMfWCwrFE=
-		</data>
-		<key>Headers/BPCameraDraftModel.h</key>
-		<data>
-		csDJ/4u2T0AoMZvshPpwucLt/h4=
-		</data>
-		<key>Headers/BPCameraVideoModel.h</key>
-		<data>
-		y+51sd2FZnbDA0h4OArilyahSWU=
-		</data>
 		<key>Headers/BPCombineProvider.h</key>
 		<data>
 		Yq0i/1V8XETyYk76qSLVYdhccQ8=
-		</data>
-		<key>Headers/BPCommodityMaterial.h</key>
-		<data>
-		qSb3kW5U0gXm+My7FQwpospUeic=
 		</data>
 		<key>Headers/BPCommonDefine.h</key>
 		<data>
@@ -48,10 +24,6 @@
 		<data>
 		u8xoJHF2TejD6y3pCG51XOrqArg=
 		</data>
-		<key>Headers/BPCustomFontModel.h</key>
-		<data>
-		5Z5gFF34/7JoGDtSOIXEwRtxtH8=
-		</data>
 		<key>Headers/BPDownloader.h</key>
 		<data>
 		PsyFL3upysGDVcSmO/ARMEZvyMk=
@@ -60,25 +32,13 @@
 		<data>
 		I1zm2TfypoKTx+B0g7ajuBKqI2U=
 		</data>
-		<key>Headers/BPEditDraftModel.h</key>
-		<data>
-		ujh71JOeJVg607Bm/+t5pQk5HE8=
-		</data>
-		<key>Headers/BPEditorElementEditingView.h</key>
-		<data>
-		IHQ+n2iyRevkmNuWT89738mOkRs=
-		</data>
-		<key>Headers/BPEditorPublicManager.h</key>
-		<data>
-		TQ7WW5PJoR9dgGlYQJCOq9985PM=
-		</data>
 		<key>Headers/BPEditorVCUtil.h</key>
 		<data>
 		Mrcm38/lmzgCsybBdnFReAKx+wQ=
 		</data>
 		<key>Headers/BPMixDataConvert.h</key>
 		<data>
-		h4TsQVujWQkyjG0MG4vuo2z5yZ8=
+		LPjrkGvXygD+pvx4ve1BLUI9Z7k=
 		</data>
 		<key>Headers/BPMixMediaView+Util.h</key>
 		<data>
@@ -102,7 +62,7 @@
 		</data>
 		<key>Headers/BPVideoPlayer.h</key>
 		<data>
-		zdv17TlCDavPxt7AuZU3VxQA9h8=
+		FnGJyTnxw5KLWXXLUnWwVYA+TCk=
 		</data>
 		<key>Headers/BPVideoPlayerState.h</key>
 		<data>
@@ -118,7 +78,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		B/sVjvzMB4oXkyV3GE2ZV45OBBA=
+		t6JNKkflBLI8J3ooRTbf19AiEQE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -149,61 +109,6 @@
 			axdkRMAUiIAy1U3CMLPe0Vdzt/gnyMyHexWAPAmKgyU=
 			</data>
 		</dict>
-		<key>Headers/BPBGMModel.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Bf29sz8BbDFt4LwVMj8TwzA/2gU=
-			</data>
-			<key>hash2</key>
-			<data>
-			ndFocLOSiSCO/T+CmcvY7eIJaEHDK39jAc5oZrMvKE8=
-			</data>
-		</dict>
-		<key>Headers/BPBaseRealmObject.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			0poBTPhZSOzEUQ3S8ddFnvhY1Fo=
-			</data>
-			<key>hash2</key>
-			<data>
-			MJ3fvPIQNYmDYNjZ6u6PmR8dMnwMOefz3xoLLFp3pvQ=
-			</data>
-		</dict>
-		<key>Headers/BPCameraDefine.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			sZkHWEInKSPYfE4ODQVMfWCwrFE=
-			</data>
-			<key>hash2</key>
-			<data>
-			ZdGvhat1bM2EolLJtyorMAs+Cl2Euz9d2sIoH27tomE=
-			</data>
-		</dict>
-		<key>Headers/BPCameraDraftModel.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			csDJ/4u2T0AoMZvshPpwucLt/h4=
-			</data>
-			<key>hash2</key>
-			<data>
-			Tg17cZVTEziUzzYjPVW9l5RXoYUyL2v6i49wEwFcImw=
-			</data>
-		</dict>
-		<key>Headers/BPCameraVideoModel.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			y+51sd2FZnbDA0h4OArilyahSWU=
-			</data>
-			<key>hash2</key>
-			<data>
-			/D5/QvtbprcDa0hcYzQy3ChNwfomI0+wQULzYSZBpQM=
-			</data>
-		</dict>
 		<key>Headers/BPCombineProvider.h</key>
 		<dict>
 			<key>hash</key>
@@ -213,17 +118,6 @@
 			<key>hash2</key>
 			<data>
 			v032Nkl48KxdRrvi3GsCfciiJe5+z/yVC8mQ3xpIs88=
-			</data>
-		</dict>
-		<key>Headers/BPCommodityMaterial.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			qSb3kW5U0gXm+My7FQwpospUeic=
-			</data>
-			<key>hash2</key>
-			<data>
-			lHBHz0/MGpCYeMUMycV3eM9dCSzFBlWNXLRvs+KKA5k=
 			</data>
 		</dict>
 		<key>Headers/BPCommonDefine.h</key>
@@ -248,17 +142,6 @@
 			0gCBkeF+bW1I/NJEx5UBG653J3dmVXhRmAqnc4z6msU=
 			</data>
 		</dict>
-		<key>Headers/BPCustomFontModel.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			5Z5gFF34/7JoGDtSOIXEwRtxtH8=
-			</data>
-			<key>hash2</key>
-			<data>
-			RBoLv3toc9fUifQNnGp5uYBnG3c1y4nkRab3LBFO3M4=
-			</data>
-		</dict>
 		<key>Headers/BPDownloader.h</key>
 		<dict>
 			<key>hash</key>
@@ -281,39 +164,6 @@
 			PZoooRvxj0dvmE+/vU2R8S72aH+xtFjraIPuu3e5S2k=
 			</data>
 		</dict>
-		<key>Headers/BPEditDraftModel.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ujh71JOeJVg607Bm/+t5pQk5HE8=
-			</data>
-			<key>hash2</key>
-			<data>
-			mWTdoqE1X2drqVcMXEE3nrbtuyRnhg8nRbbXKYI1ObE=
-			</data>
-		</dict>
-		<key>Headers/BPEditorElementEditingView.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			IHQ+n2iyRevkmNuWT89738mOkRs=
-			</data>
-			<key>hash2</key>
-			<data>
-			8MU9oKiB50RDgD2OUURnYE+flnCsbszOLSLjQGhOQqo=
-			</data>
-		</dict>
-		<key>Headers/BPEditorPublicManager.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TQ7WW5PJoR9dgGlYQJCOq9985PM=
-			</data>
-			<key>hash2</key>
-			<data>
-			bSTLebjiUyZ6pgFiCg3c9hFU7p0ffRnM+WkCLenQYGo=
-			</data>
-		</dict>
 		<key>Headers/BPEditorVCUtil.h</key>
 		<dict>
 			<key>hash</key>
@@ -329,11 +179,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			h4TsQVujWQkyjG0MG4vuo2z5yZ8=
+			LPjrkGvXygD+pvx4ve1BLUI9Z7k=
 			</data>
 			<key>hash2</key>
 			<data>
-			xtai7hG2WUaC+FQUuEqTF4sXXy/RlFAPUcBD2wXCxAg=
+			0SH4/bh5CQixcJfNZLSuHssY3jeUSEB0xzRBmpEfzUI=
 			</data>
 		</dict>
 		<key>Headers/BPMixMediaView+Util.h</key>
@@ -395,11 +245,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zdv17TlCDavPxt7AuZU3VxQA9h8=
+			FnGJyTnxw5KLWXXLUnWwVYA+TCk=
 			</data>
 			<key>hash2</key>
 			<data>
-			vcW0O6XSrmvg7+R3o1FpUoxBMjndClyeWY63u0WCOyQ=
+			ttxoIaEB4yNNnVp8YzivRrbj+Fku0rjwuAjzKy1q5Bk=
 			</data>
 		</dict>
 		<key>Headers/BPVideoPlayerState.h</key>

@@ -55,8 +55,8 @@
     
     //需要先下载资源到本地，然后转换成 BPMixWindow 对象
     
-    //测试视频地址 http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4
-    NSString *videoUrl = @"https://media.w3.org/2010/05/sintel/trailer.mp4";
+    //测试视频地址 不一定好用
+    NSString *videoUrl = @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
     
     self.downloader = [[BPDownloader alloc] initWithUrl: videoUrl localPath:nil];
    

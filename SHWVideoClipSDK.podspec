@@ -44,7 +44,7 @@ A videoClip sdk.
   s.dependency 'SSZipArchive'
 
   s.dependency 'MJExtension'
-  s.dependency 'SHWMixMobile',    '0.2.6'
+  s.dependency 'SHWMixMobile'
   s.dependency 'Realm'
   
 end

@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "BPEditDraftModel.h"
 #import "BPVideoPlayerState.h"
+#import <SWMixLibsSDK/BPMixWindow.h>
 
 /**
  NOTE:

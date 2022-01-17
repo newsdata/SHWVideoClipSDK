@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *path;
 
+
+/// 获取支持的字体数组
 @property (nonatomic, strong , readonly) NSArray<BPCustomFontModel *>*fonts;
 
 - (instancetype)initWithTitle:(NSString *)title name:(NSString *)name path:(NSString *)path;

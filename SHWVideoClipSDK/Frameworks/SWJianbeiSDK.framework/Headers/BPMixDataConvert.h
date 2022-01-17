@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BPEditDraftModel.h"
+#import <SWMixLibsSDK/BPMixWindow.h>
 #import <SWMixLibsSDK/magic_util.h>
 
 /// 将 OC 层的编辑数据，转为 mix 使用的数据结构

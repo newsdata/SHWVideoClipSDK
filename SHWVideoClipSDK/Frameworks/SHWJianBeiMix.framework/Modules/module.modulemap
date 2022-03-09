@@ -1,0 +1,6 @@
+framework module SHWJianBeiMix {
+  umbrella header "SHWJianBeiMix.h"
+
+  export *
+  module * { export * }
+}

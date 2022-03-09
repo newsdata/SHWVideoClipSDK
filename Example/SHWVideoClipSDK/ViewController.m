@@ -7,7 +7,7 @@
 
 #import "ViewController.h"
 #import <TZImagePickerController/TZImagePickerController.h>
-#import <SWJianbeiSDK/SWJianbeiSDK.h>
+#import <SHWVideoClipSDK/SHWVideoClip.h>
 #import "EditViewController.h"
 
 @interface ViewController ()<TZImagePickerControllerDelegate>

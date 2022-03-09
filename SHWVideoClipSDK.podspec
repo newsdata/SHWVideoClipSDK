@@ -32,19 +32,11 @@ A videoClip sdk.
   s.frameworks = 'UIKit'
   
   s.dependency 'AFNetworking'
-  s.dependency 'Masonry', '1.1.0'
-  s.dependency 'MBProgressHUD', '~>1.1.0'
-  s.dependency 'JXCategoryView', '1.5.2'
-  s.dependency 'RealReachability', '1.3.0'
-  s.dependency 'BlocksKit', '2.2.5'
-  s.dependency 'Aspects', '1.4.1'
-  s.dependency 'YYCategories', '1.0.4'
-  s.dependency 'QTEventBus', '0.4.0'
-  s.dependency 'YYCache', '1.0.4'
-  s.dependency 'SSZipArchive'
-
-  s.dependency 'MJExtension'
-  s.dependency 'SHWMixMobile'
+  s.dependency 'SHWMixMobile',    '0.2.6'
+  s.dependency 'YYModel'
+  s.dependency 'Masonry'
+  s.dependency 'YYCategories'
   s.dependency 'Realm'
+  s.dependency 'MJExtension'
   
 end

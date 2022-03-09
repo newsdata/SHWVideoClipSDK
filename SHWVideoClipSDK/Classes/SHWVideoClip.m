@@ -20,6 +20,11 @@
                           @"zhankuwenyiti.ttf",
                           @"zhankuxiaoweiLOGO.ttf"];
     [info setValue:valueArr forKey:@"UIAppFonts"];
+    
+    [MgcConfig mgc_setupSDK];
+    /// 开启硬解码 硬编码
+    [BPVideoPlayer setupMixHWDecode:YES hwEncode:YES];
+    
 }
 
 @end

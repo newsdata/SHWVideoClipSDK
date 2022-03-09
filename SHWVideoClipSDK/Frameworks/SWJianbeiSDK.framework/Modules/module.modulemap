@@ -1,6 +1,0 @@
-framework module SWJianbeiSDK {
-  umbrella header "SWJianbeiSDK.h"
-
-  export *
-  module * { export * }
-}

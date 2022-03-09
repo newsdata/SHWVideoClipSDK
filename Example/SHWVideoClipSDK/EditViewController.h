@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <SWMixLibsSDK/BPMixWindow+Adjust.h>
+#import <SHWVideoClipSDK/SHWVideoClip.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

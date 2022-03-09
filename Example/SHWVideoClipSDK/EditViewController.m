@@ -8,10 +8,12 @@
 #import "EditViewController.h"
 #import "EditCollectionViewCell.h"
 
-#import <SWJianbeiSDK/SWJianbeiSDK.h>
-#import <SWMixLibsSDK/SWMixLibsSDK.h>
-
 #define BPMediaDirectory @"/Documents/bp_media/" //资源文件夹 固定不可修改，否则不起作用
+
+#define FontArray @[@"zhankuqingkehuangyouti.ttf",@"SourceHanSansCN-Heavy.ttf",@"zhankukuaileti.ttf",@"zhankuwenyiti.ttf",@"pingfang.ttf",@"zhankuxiaoweiLOGO.ttf",@"Alibaba-PuHuiTi-Medium.ttf"]
+
+// 站酷黄油体, 表情颜体，思源黑体，站酷快乐体，站酷文艺体，苹方，站酷小微LOGO体，阿里巴巴普惠体
+#define FontNameArray @[@"zcoolqingkehuangyouti",@"Source Han Sans CN",@"HappyZcool-2016",@"zcoolwenyiti",@"PingFang SC",@"xiaowei",@"Alibaba PuHuiTi"]
 
 @interface EditViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -24,9 +26,18 @@
 
 @property (nonatomic,strong) BPMixWindow *model;
 
+@property (nonatomic,strong) NSArray *transitionArr;
+
 @end
 
 @implementation EditViewController
+
+- (NSArray *)transitionArr {
+    if (!_transitionArr) {
+        _transitionArr = @[@"virtual",@"rotate",@"ripples",@"blinds",@"blackToWhite",@"whiteToblack",@"doorway",@"cube",@"gridflip",@"polkadotscurtain",@"dreamyzoom",@"hexagonalize",@"fade",@"wipeleft",@"wiperight",@"wipeup",@"inwardscale",@"leftright",@"leftrotateandscale",@"movedownward",@"moveupward",@"normalrotate",@"rightdown",@"upanddown",@"outwardscale"];
+    }
+    return _transitionArr;
+}
 
 - (BPPlayerSate)playerState {
     return self.videoPlayer.state;
@@ -37,7 +48,7 @@
         CGSize size = CGSizeMake([UIScreen mainScreen].bounds.size.width, 300);
         // 视频比例
         BPVideoMaskType aspect = self.model.videoMaskType;
-        CGRect rect = [BPEditorVCUtil playerFrameWithContenViewSize:size aspect:aspect];
+        CGRect rect = [BPMixModelTool playerFrameWithContenViewSize:size aspect:aspect];
         // 初始化播放器 ，默认播放全部视频
         BPMixWindow *window = self.model;//修改copy后的对象，不影响原对象
         window.startIndex = 0; //开始
@@ -57,7 +68,9 @@
     self.model = [self.windowModel copy];
     //将sdk 的playerView添加到 videoView上
     [self.videoView addSubview:self.videoPlayer.playerView];
-    [self.videoPlayer play:YES];
+    [self.videoPlayer setIsLooping:YES];
+    [self.videoPlayer play];
+    
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"EditCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"EditCollectionViewCell"];
 }
@@ -73,7 +86,7 @@
 - (IBAction)play:(id)sender {
     
     if (self.videoPlayer.state == BPPlayerSate_Pause) {
-        [self.videoPlayer play:YES];
+        [self.videoPlayer play];
     }else if (self.videoPlayer.state == BPPlayerSate_Play) {
         [self.videoPlayer pause];
     }
@@ -89,9 +102,9 @@
     NSString *outPath = [documentPath stringByAppendingFormat:@"/result.mp4"];
     
     //合成工具BPCombineProvider 合成
-    BPCombineProvider *combineProvider = [[BPCombineProvider alloc]initWithMixWindow:self.model outputPath:outPath];
+    MgcCombineProvider *combineProvider = [[MgcCombineProvider alloc]initWithMixWindow:self.model outputPath:outPath];
     
-    [combineProvider asyncCompositeWithResult:^(BOOL success, float duration) {
+    [combineProvider startAsyncCompositeWithResult:^(BOOL success, float duration) {
         if (success) {
             UISaveVideoAtPathToSavedPhotosAlbum(outPath, self, @selector(video:didFinishSavingWithError:contextInfo:), nil);
         }else {
@@ -111,7 +124,7 @@
     BPVideoMaskType16x9        = 3, /// 16:9
 */
     NSInteger aspect = arc4random() % 4;
-    CGRect newReact = [BPEditorVCUtil playerFrameWithContenViewSize:self.videoView.frame.size aspect: aspect];
+    CGRect newReact = [BPMixModelTool playerFrameWithContenViewSize:self.videoView.frame.size aspect: aspect];
     //更新比例
     [self.videoPlayer updatePlayerFrame:newReact videoSize:size];
     
@@ -119,7 +132,7 @@
 }
 
 - (void)play {
-    [self.videoPlayer play:YES];
+    [self.videoPlayer play];
 }
 
 #pragma mark ---- 单个素材参数调整 -------------------
@@ -141,8 +154,7 @@
 //            video.speed = 0.5;//慢放
 //        }
     }
-    [self.videoPlayer updatePlayerData: self.model];
-    [self.videoPlayer play:YES];
+    [self.videoPlayer resetWithData:self.model seekTo:(int) self.videoPlayer.currentTime needPause:NO];
 }
 
 
@@ -239,6 +251,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    int position = self.videoPlayer.currentTime;
     BPMixWindow *newModel = self.model;
     
     //默认处理第一个视频片段
@@ -252,18 +265,19 @@
                 return;
             }
             //静音
-            video.rmSound = !video.rmSound;
+            video.rmSound = YES; // 真实model 修改
+            [self.videoPlayer resetAllVolume:0]; //立即生效
+            return;
+            
         }
             break;
         case 1:
         {//截取
-            
             video.cutStartTs = 2000;//截取开始时间
             video.cutEndTs = 3000; //截取结束时间
-            
             // 截取后，需要做数据订正：移除或截取 超出主轴时长的副轴字幕、音乐
             [newModel bp_adjustAttachTime];
-            
+            position = 0;
         }
             break;
         case 2:
@@ -316,10 +330,8 @@
             }
             //移除被分割的整段视频
             [newModel.video.views removeObject:video];
-            //播放分割后的最后一段视频
-//            int startIndex = [@(newModel.video.views.count) intValue] - 1;
-//            newModel.startIndex = startIndex;
-//            newModel.endIndex = startIndex;
+            
+            position = 0;//从头开始播放
             
         }
             break;
@@ -331,11 +343,17 @@
                 return;
             }
             
-            if ([video hadBeautifyFaceFilter]) {
-                [video removeBeautifyFaceFilter];
-            } else {
-                [video addBeautifyFaceFilter];
-            }
+            NSString *bundlePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"SWFilterBundle" ofType:@"bundle"];
+            NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+            
+            NSString *imagePath = [bundle pathForResource: @"fennen" ofType:@"png"];
+            
+            BPMixFilter *filter = [[BPMixFilter alloc]init];
+            
+            filter.name = @"lookup-retro";
+            filter.optionStr = [NSString stringWithFormat:@"duration=-1,startTime=0,offset=0,imgPath=%@",imagePath];
+            
+            [video.filters addObject:filter];
             
         }
             break;
@@ -350,7 +368,9 @@
             break;
         case 5:
         {//音量 0 ~ 1
-            video.volume = 0.5;
+            video.volume = arc4random()%10/10.0;
+            [self.videoPlayer resetAllVolume:0.5];
+            return;
             
         }
             break;
@@ -368,12 +388,22 @@
             }
             NSArray *arr = @[@"冰淇淋", @"城市", @"初恋", @"纯净", @"粉嫩", @"古老", @"光华", @"海滩", @"假日", @"桔梗", @"洛丽塔", @"马卡龙", @"美味", @"慕斯", @"亲亲", @"青草", @"清新", @"日落", @"珊瑚", @"生动", @"甜美", @"小森林", @"小甜甜", @"新鲜", @"洋气", @"元气", @"原片", @"自然", @"crisp"];
             //移除
-            if ([video hadStyleFilter]) {
-                [video removeStyleFilter];
+            if (video.filters) {
+                [video.filters removeAllObjects];
             }
             //添加风格滤镜
-            NSString *newFilter = [NSString stringWithFormat:@"%@.png", [self transChineseStringToPingyin:arr[4]]];
-            [video addStyleFilterWithName:newFilter];
+            NSString *newFilter = [NSString stringWithFormat:@"%@", [self transChineseStringToPingyin:arr[arc4random()%27]]];
+            
+            NSString *bundlePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"SWFilterBundle" ofType:@"bundle"];
+            NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+            
+            NSString *imagePath = [bundle pathForResource:newFilter ofType:@"png"];
+            
+            BPMixFilter *filter = [[BPMixFilter alloc]init];
+            filter.name = @"lookup-retro";
+            filter.optionStr = [NSString stringWithFormat:@"duration=-1,startTime=0,offset=0,imgPath=%@",imagePath];
+            
+            [video.filters addObject:filter];
             
         }
             break;
@@ -392,110 +422,110 @@
                 }
             }
             BPMixTransitionView *transitionVideo = [[BPMixTransitionView alloc] init];
-            //转场枚举 18种任选
-            BPTransitionType type = arc4random()%18;
-            transitionVideo.name = [BPTransitionTypeConvert nameWithType:type];
+            NSInteger idx = arc4random()%self.transitionArr.count;
+            
+            NSLog(@"转场ID:%ld",idx);
+            transitionVideo.name = self.transitionArr[idx];
             //  在 window.views 插入转场
             [newModel.video insertVidoe:transitionVideo atIndex:index];
+            position = 0;//从头开始播放
         }
             break;
         case 9:
         {//添加字幕
-            //新建字幕对象
-            BPMixSubtitleView *editModel = [[BPMixSubtitleView alloc]init];
-            editModel.attachTime = 0;//开始
-            editModel.detachTime = 12000;//结束
             
-            //获取默认支持字体数组
-            NSArray *fontArray = [BPCustomFontModel new].fonts;
-            BPCustomFontModel *fontModel = fontArray[arc4random()%6];
+            NSString *showText = @"长风破浪会有时，直挂云帆济沧海！";
             
-            //创建字体对象
-            BPMixFont *titleFont = [[BPMixFont alloc]init];
-            titleFont.text = @"这是添加的字幕";
-            titleFont.fontSize = 42;
-            titleFont.font = fontModel.path;
-            titleFont.fontColor = @"#FFABF87B";
-            titleFont.strokeWidth = 1;
-            titleFont.strokeAlpha = 0.3;
+            CGFloat scale = 0.5; //字体fontSize为scale 的100倍
             
-            editModel.titleFont = titleFont;
-            editModel.shadow = YES; //是否存在阴影
-            editModel.bgColor = @"#00000000"; //文字区域背景颜色
-            editModel.topPadding = 24; //上边距
-            editModel.leftPadding = 24;//左边距
-            editModel.linePadding = 0; //行间距
-            editModel.shadowPaddingX = 8; //阴影X轴偏移量
-            editModel.shadowPaddingY = -8; //阴影外轴偏移量
-           
-            editModel.titleFont = titleFont;
+            int textIndex = arc4random()%7;
             
-            editModel.subtitleType = BPEditSubtitleType_BackShaw;
+            UIFont *textFont = [UIFont fontWithName:FontNameArray[textIndex] size: scale * 100];
             
+            MgcMixSubtitleView *magicTitleView = [[MgcMixSubtitleView alloc]init];
+            magicTitleView.attachTime = 0;
+            magicTitleView.detachTime = -1;
+            magicTitleView.viewId = [[NSUUID UUID].UUIDString hash];
+            magicTitleView.type = @"MIX_SUBTITLE";
+            magicTitleView.mType = Mgc_Subtitle;
             
-            BPMixLayout *layout = [[BPMixLayout alloc]init];
+            BPMixLayout *layout = [BPMixLayout new];
+            layout.position = 1;//左上（0，0）坐标
+            layout.rx = 1; //最小为1
+            layout.ry = textFont.pointSize; //最小为1
+            layout.refract = 1; //透明度
+            layout.width = -1; //自适应宽度
+            layout.height = -1; //自适应高度
+            magicTitleView.layout = layout;
 
-            UIFont *font = [UIFont fontWithName:fontModel.name size:editModel.titleFont.fontSize];
-           
-            //获取视频宽高
-            CGSize size = CGSizeMake(newModel.config.width, newModel.config.height);
+            MgcMixSubtitle *mixTitle = [MgcMixSubtitle new];
+            mixTitle.text = showText;
+            mixTitle.rotation = 0;
+            mixTitle.duration = 2000;//必须有值，否则动画不生效
+            mixTitle.scale = scale;
+            //获取word布局数组
+            mixTitle.wordLayout = [BPMixModelTool getWordLayoutListFromText:showText Font:textFont LetterPadding:0 LinePadding:-2 MaxWidth:self.model.config.width MaxHeight:self.model.config.height];
             
-            //获取文字宽高
-            CGSize titleSize = [BPCommonMethod getWidthFromText:editModel.titleFont.text WithSize:font AboutWidth:size.width AndHeight:size.height];
+            MgcMixSubtitleStyle *titleStyle = [MgcMixSubtitleStyle new];
+
+            MgcMixSubtitleFont *subtitleFont = [MgcMixSubtitleFont new];
+            subtitleFont.textColor = @"#FFFFFFFF";
+            subtitleFont.fontStyle = @"normal"; //正常，斜体
+            subtitleFont.fontWeight = 400;
             
-            CGFloat fontWidth = 0.0;
-            CGFloat fontHeight = 0.0;
+            NSString *fileName = FontArray[textIndex];
+            NSString *path = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension] ofType:fileName.pathExtension];
             
-            fontWidth = titleSize.width+editModel.leftPadding*2;
-            fontHeight = titleSize.height+editModel.topPadding*2;
-//            CGFloat rx = (size.width-fontWidth)/2; //视频宽度 - 字体宽度
-            CGFloat ry = (size.height-fontHeight); //视频真实高度-字体高度
-            //字幕添加的位置
-            layout.rx = arc4random()%llroundf(size.width-fontWidth); //随机 0 ~ 最右
-            layout.ry = arc4random()%llroundf(ry); //随机 0 ~ 最底部
-            layout.width = fontWidth;
-            layout.height = fontHeight;
+            subtitleFont.fontFamily = path;
             
-            editModel.layout = layout;
+            titleStyle.subtitleFont = subtitleFont;
+            MgcMixSubtitleStroke *titleStroke = [MgcMixSubtitleStroke new];
+            titleStroke.strokeWidth = 0;
+            titleStroke.strokeColor = @"#00000000";
             
-            [newModel.attaches.views addObject:editModel];
+            MgcMixSubtitleShadow *titleShadow = [MgcMixSubtitleShadow new];
+            titleShadow.blur = 0.0;
+            titleShadow.shadowColor = @"#00000000";
+            titleShadow.degree = 0.0;
+            titleShadow.distance = 0;
             
+            titleStyle.subtitleShadow = titleShadow;
+            titleStyle.subtitleStroke = titleStroke;
+            
+            titleStyle.bgColor = @"#00000000";
+//            titleStyle.align = @"right";
+            titleStyle.isVertical = NO;
+            titleStyle.letterPadding = 0;
+            titleStyle.linePadding = 0;
+            titleStyle.padding = 0;
+
+            mixTitle.subtitleStyle = titleStyle;
+            
+
+            MgcMixSubtitleAnimate *mixAnimate = [MgcMixSubtitleAnimate new];
+            MgcMixSubtitleAnimateInfo *animateInfo = [MgcMixSubtitleAnimateInfo new];
+            animateInfo.type = @"circleFlyIn";
+            animateInfo.duration = 2000;
+            mixAnimate.enter = animateInfo;
+            mixTitle.subtitleAnimate = mixAnimate;
+            
+            magicTitleView.mixSubtitle = mixTitle;
+
+            [newModel.attaches.views addObject:magicTitleView];
+            
+//            [self.videoPlayer addMixSubtitle:magicTitleView];
+//            return;
+            position = (int)magicTitleView.attachTime;
         }
             break;
         case 10:
         {//添加音频
             
             if (newModel.audios.count > 0) {//移除音频
-                [newModel.audios removeObjectAtIndex:0];
+//                [newModel.audios removeObjectAtIndex:0];
             }else {
                 
                 //1、将云端资源下载到沙盒或bundle中的音频资源 copy 到沙盒路径（NSHomeDirectory()/Documents/bp_media/xxx.mp3）中
-                NSString *fileName = @"test1.mp3";
-                NSString *path = [[NSBundle mainBundle] pathForResource:@"test1" ofType:@"mp3"];
-                
-                NSString *mediaURL = [BPMediaDirectory stringByAppendingPathComponent:fileName];
-                NSString* fullPath = [NSString stringWithFormat:@"%@%@", NSHomeDirectory(), mediaURL];
-                
-                if (![[NSFileManager defaultManager] fileExistsAtPath:fullPath]) {
-                    BOOL isSuccess = [[NSFileManager defaultManager] copyItemAtPath:path toPath:fullPath error:nil];
-                    if (!isSuccess) {
-                        NSLog(@"");
-                        return;
-                    }
-                }
-                //2、创建音频对象
-                BPMixAudio *audioModel = [[BPMixAudio alloc]init];
-                audioModel.attachTime = 0;//音频从开始切入
-                audioModel.fileName = fileName;
-                audioModel.type = BPAudioType_BGM;//音乐
-                audioModel.cutStartTs = 0.0; //音频开始
-                audioModel.cutEndTs = 3000; //音频结束 3s
-                audioModel.detachTime = audioModel.cutEndTs+audioModel.attachTime;
-                audioModel.volumeFadeInDuration = 1000.0; //淡入
-                audioModel.volumeFadeOutDuration = 0.0; //淡出
-                audioModel.repeat = false;
-                //3、插入MixWindModel 中
-                [newModel.audios addObject:audioModel];
                 
                 NSString *fileName1 = @"test.mp3";
                 NSString *path1 = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"mp3"];
@@ -510,18 +540,21 @@
                         return;
                     }
                 }
+                //2、创建音频对象
                 BPMixAudio *audioModel1 = [[BPMixAudio alloc]init];
-                audioModel1.attachTime = 3001;//从3s开始切入
+                audioModel1.attachTime = 0;//从3s开始切入
                 audioModel1.fileName = @"test.mp3";
                 audioModel1.type = BPAudioType_BGM;//音乐
                 audioModel1.cutStartTs = 3000; //音频开始
                 audioModel1.cutEndTs = 7000; //截取4s的音频
-                audioModel1.detachTime = video.mediaDuration;
-                audioModel1.volumeFadeInDuration = 0; //淡入
-                audioModel1.volumeFadeOutDuration = 0; //淡出
+                audioModel1.detachTime = -1;
+                audioModel1.volumeFadeInDuration = 1000; //淡入
+                audioModel1.volumeFadeOutDuration = 1000; //淡出
                 audioModel1.repeat = YES;
-                
-                [newModel.audios addObject:audioModel1];
+                //3、插入MixWindModel 中
+                [newModel.audios addObject:audioModel1];//源数据模型
+//                [self.videoPlayer addAduio:audioModel1]; //立即刷新
+//                return;
             }
             
         }
@@ -556,8 +589,8 @@
             BPMixImageView *stickerView  = [[BPMixImageView alloc]initWithSource:source];
             stickerView.mType = Mix_Picture;
             stickerView.attachTime = 0;
-//            stickerView.mediaDuration = -1; //一直显示
-            stickerView.mediaDuration = 2000; //2s
+            stickerView.mediaDuration = -1; //一直显示
+//            stickerView.mediaDuration = 2000; //2s
             
             BPMixLayout *layout = [[BPMixLayout alloc]init];
             layout.rx = 40;
@@ -567,6 +600,9 @@
             
             stickerView.layout = layout;
             [newModel.attaches.views addObject:stickerView];
+            
+            [self.videoPlayer addAttachMediaView:stickerView];
+            return;
             
         }
             break;
@@ -616,7 +652,8 @@
             
             stickerView.layout = layout;
             [newModel.attaches.views addObject:stickerView];
-            
+            [self.videoPlayer addAttachMediaView:stickerView];
+            return;
         }
             break;
         case 13:
@@ -631,8 +668,9 @@
     }
     
     //更新播放器数据
-    [self.videoPlayer updatePlayerData: newModel];
-    [self play];
+    
+    [self.videoPlayer resetWithData:newModel seekTo:position needPause:self.videoPlayer.state == BPPlayerSate_Pause];
+    
 }
 
 ///中文转拼音
@@ -675,5 +713,200 @@
     [self.videoPlayer stop];
 }
 
+
+/*
+ EnterAnimateType_e MixEnterAnimateType(std::string type) {
+     if (type == "fadeIn") {
+         
+     }
+     if (type == "karaokeFloor") {
+         
+     }
+     if (type == "karaoke") {
+         
+     }
+     if (type == "tinyZoomIn") {
+         
+     }
+     if (type == "zoomOut") {
+         
+     }
+     if (type == "tinyZoomOut") {
+         
+     }
+     if (type == "zoomIn") {
+         
+     }
+     if (type == "printer1") {
+         
+     }
+     if (type == "printer2") {
+         
+     }
+     if (type == "printer3") {
+         
+     }
+     if (type == "slideLeft") {
+         
+     }
+     if (type == "slideRight") {
+         
+     }
+     if (type == "slideUp") {
+         
+     }
+     if (type == "slideDown") {
+         
+     }
+     if (type == "sunRise") {
+         
+     }
+     if (type == "eraseRight") {
+         
+     }
+     if (type == "eraseLeft") {
+         
+     }
+     if (type == "eraseUp") {
+         
+     }
+     if (type == "eraseDown") {
+         
+     }
+     if (type == "spinUp") {
+         
+     }
+     if (type == "gatherUp") {
+         
+     }
+     if (type == "circleFlyIn") {
+         
+     }
+     if (type == "circleIn") {
+         
+     }
+     
+ }
+
+ QuitAnimateType_e MixQuitAnimateType(std::string type) {
+     if (type == "fadeOut") {
+         
+     }
+     if (type == "tinyZoomIn") {
+         
+     }
+     if (type == "zoomOut") {
+         
+     }
+     if (type == "tinyZoomOut") {
+         
+     }
+     if (type == "zoomIn") {
+         
+     }
+     if (type == "printer1") {
+         
+     }
+     if (type == "printer2") {
+         
+     }
+     if (type == "printer3") {
+         
+     }
+     if (type == "slideLeft") {
+         
+     }
+     if (type == "slideRight") {
+         
+     }
+     if (type == "slideUp") {
+         
+     }
+     if (type == "slideDown") {
+         
+     }
+     if (type == "sunSet") {
+         
+     }
+     if (type == "eraseRight") {
+         
+     }
+     if (type == "eraseLeft") {
+         
+     }
+     if (type == "eraseUp") {
+         
+     }
+     if (type == "eraseDown") {
+         
+     }
+     if (type == "spinDown") {
+         
+     }
+     if (type == "spread") {
+         
+     }
+     if (type == "circleFlyOut") {
+         
+     }
+     if (type == "circleOut") {
+         
+     }
+     
+ }
+
+ CycleAnimateType_e MixCycleAnimateType(std::string type) {
+     if (type == "upDownRolling") {
+         
+     }
+     if (type == "leftRightRolling") {
+         
+     }
+     if (type == "heartBeat") {
+         
+     }
+     if (type == "twinkle") {
+         
+     }
+     if (type == "waggle") {
+         
+     }
+     if (type == "vibrate") {
+         
+     }
+     if (type == "jump") {
+         
+     }
+     if (type == "sway") {
+         
+     }
+     if (type == "flip") {
+         
+     }
+     if (type == "clock") {
+         
+     }
+     if (type == "wiper") {
+         
+     }
+     if (type == "rotate") {
+         
+     }
+     if (type == "wave") {
+         
+     }
+    
+ }
+
+ Align_e MixAlignType(std::string align){
+     if (align == "right") {
+        
+     } else if (align == "center") {
+         
+     } else {
+         return mix::engine::AlignLeft;
+     }
+ }
+ */
 
 @end

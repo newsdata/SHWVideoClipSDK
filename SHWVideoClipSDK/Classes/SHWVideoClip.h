@@ -13,7 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SHWVideoClip : NSObject
 
-+(void)loadSHWVideoClip;
+/// 初始化sdk
+/// @param decode 是否开启硬解码
+/// @param encode 是否开启硬编码
++ (void)loadSHWVideoClipOpenHwDecode:(BOOL)decode hwEncode:(BOOL)encode;
 
 @end
 

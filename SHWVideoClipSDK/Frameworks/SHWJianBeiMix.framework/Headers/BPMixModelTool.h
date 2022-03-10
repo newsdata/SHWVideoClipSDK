@@ -38,7 +38,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param linePading 行间距
 /// @param maxWidth 最大宽度
 /// @param maxHeight 最大高度
-+(NSMutableArray *)getWordLayoutListFromText:(NSString *)text Font:(UIFont *)font LetterPadding:(int)letterPading LinePadding:(int)linePading MaxWidth:(int)maxWidth MaxHeight:(int)maxHeight;
++(NSMutableArray *)getWordLayoutListFromText:(NSString *)text Font:(UIFont *)font LetterPadding:(int)letterPading LinePadding:(int)linePading MaxWidth:(int)maxWidth MaxHeight:(int)maxHeight isVertical:(BOOL)isVertical;
+
+
+/// 根据字体的路径返回UIFont 对象
+/// @param path  字体路径
+/// @param size  字体size
++(UIFont*)customFontWithPath:(NSString*)path size:(CGFloat)size;
 
 @end
 

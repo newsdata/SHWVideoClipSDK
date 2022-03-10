@@ -10,10 +10,8 @@
 
 #define BPMediaDirectory @"/Documents/bp_media/" //资源文件夹 固定不可修改，否则不起作用
 
-#define FontArray @[@"zhankuqingkehuangyouti.ttf",@"SourceHanSansCN-Heavy.ttf",@"zhankukuaileti.ttf",@"zhankuwenyiti.ttf",@"pingfang.ttf",@"zhankuxiaoweiLOGO.ttf",@"Alibaba-PuHuiTi-Medium.ttf"]
-
 // 站酷黄油体, 表情颜体，思源黑体，站酷快乐体，站酷文艺体，苹方，站酷小微LOGO体，阿里巴巴普惠体
-#define FontNameArray @[@"zcoolqingkehuangyouti",@"Source Han Sans CN",@"HappyZcool-2016",@"zcoolwenyiti",@"PingFang SC",@"xiaowei",@"Alibaba PuHuiTi"]
+#define FontArray @[@"zhankuqingkehuangyouti.ttf",@"SourceHanSansCN-Heavy.ttf",@"zhankukuaileti.ttf",@"zhankuwenyiti.ttf",@"pingfang.ttf",@"zhankuxiaoweiLOGO.ttf",@"Alibaba-PuHuiTi-Medium.ttf"]
 
 @interface EditViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -31,6 +29,8 @@
 @end
 
 @implementation EditViewController
+
+int positionX = 1;
 
 - (NSArray *)transitionArr {
     if (!_transitionArr) {
@@ -342,17 +342,17 @@
                 NSLog(@"-- 美颜类型有误");
                 return;
             }
-            
+
             NSString *bundlePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"SWFilterBundle" ofType:@"bundle"];
             NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
-            
+
             NSString *imagePath = [bundle pathForResource: @"fennen" ofType:@"png"];
-            
+
             BPMixFilter *filter = [[BPMixFilter alloc]init];
-            
+
             filter.name = @"lookup-retro";
             filter.optionStr = [NSString stringWithFormat:@"duration=-1,startTime=0,offset=0,imgPath=%@",imagePath];
-            
+
             [video.filters addObject:filter];
             
         }
@@ -386,13 +386,13 @@
                 NSLog(@"-- 滤镜类型有误");
                 return;
             }
-            NSArray *arr = @[@"冰淇淋", @"城市", @"初恋", @"纯净", @"粉嫩", @"古老", @"光华", @"海滩", @"假日", @"桔梗", @"洛丽塔", @"马卡龙", @"美味", @"慕斯", @"亲亲", @"青草", @"清新", @"日落", @"珊瑚", @"生动", @"甜美", @"小森林", @"小甜甜", @"新鲜", @"洋气", @"元气", @"原片", @"自然", @"crisp"];
+            NSArray *arr = @[@"冰淇淋", @"城市", @"初恋", @"纯净", @"粉嫩", @"古老", @"光华", @"海滩", @"假日", @"桔梗", @"洛丽塔", @"马卡龙", @"美味", @"慕斯", @"亲亲", @"青草", @"清新", @"日落", @"珊瑚", @"生动", @"甜美", @"小森林", @"小甜甜", @"新鲜", @"洋气", @"元气", @"原片", @"自然"];
             //移除
             if (video.filters) {
                 [video.filters removeAllObjects];
             }
             //添加风格滤镜
-            NSString *newFilter = [NSString stringWithFormat:@"%@", [self transChineseStringToPingyin:arr[arc4random()%27]]];
+            NSString *newFilter = [NSString stringWithFormat:@"%@", [self transChineseStringToPingyin:arr[arc4random()%26]]];
             
             NSString *bundlePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"SWFilterBundle" ofType:@"bundle"];
             NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
@@ -401,7 +401,7 @@
             
             BPMixFilter *filter = [[BPMixFilter alloc]init];
             filter.name = @"lookup-retro";
-            filter.optionStr = [NSString stringWithFormat:@"duration=-1,startTime=0,offset=0,imgPath=%@",imagePath];
+            filter.optionStr = [NSString stringWithFormat:@"duration=-1,startTime=0,imgPath=%@",imagePath];
             
             [video.filters addObject:filter];
             
@@ -435,12 +435,17 @@
         {//添加字幕
             
             NSString *showText = @"长风破浪会有时，直挂云帆济沧海！";
+            CGFloat scale = 0.48;
             
-            CGFloat scale = 0.5; //字体fontSize为scale 的100倍
+            NSString *fileName = FontArray[arc4random()%7];
+            NSString *path = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension] ofType:fileName.pathExtension];
+            UIFont *textFont = [BPMixModelTool customFontWithPath: path size: scale * 100];//字体fontSize为scale * 100
             
-            int textIndex = arc4random()%7;
-            
-            UIFont *textFont = [UIFont fontWithName:FontNameArray[textIndex] size: scale * 100];
+            MgcMixSubtitleFont *subtitleFont = [MgcMixSubtitleFont new];
+            subtitleFont.textColor = @"#FFD700";
+            subtitleFont.fontStyle = @"normal"; //正常，斜体 italic
+            subtitleFont.fontWeight = 500;
+            subtitleFont.fontFamily = path;
             
             MgcMixSubtitleView *magicTitleView = [[MgcMixSubtitleView alloc]init];
             magicTitleView.attachTime = 0;
@@ -450,35 +455,16 @@
             magicTitleView.mType = Mgc_Subtitle;
             
             BPMixLayout *layout = [BPMixLayout new];
-            layout.position = 1;//左上（0，0）坐标
-            layout.rx = 1; //最小为1
-            layout.ry = textFont.pointSize; //最小为1
+            layout.rx = 1; //设置为0可能会无效
+            layout.ry = scale * 100; //
             layout.refract = 1; //透明度
             layout.width = -1; //自适应宽度
             layout.height = -1; //自适应高度
             magicTitleView.layout = layout;
-
-            MgcMixSubtitle *mixTitle = [MgcMixSubtitle new];
-            mixTitle.text = showText;
-            mixTitle.rotation = 0;
-            mixTitle.duration = 2000;//必须有值，否则动画不生效
-            mixTitle.scale = scale;
-            //获取word布局数组
-            mixTitle.wordLayout = [BPMixModelTool getWordLayoutListFromText:showText Font:textFont LetterPadding:0 LinePadding:-2 MaxWidth:self.model.config.width MaxHeight:self.model.config.height];
             
             MgcMixSubtitleStyle *titleStyle = [MgcMixSubtitleStyle new];
-
-            MgcMixSubtitleFont *subtitleFont = [MgcMixSubtitleFont new];
-            subtitleFont.textColor = @"#FFFFFFFF";
-            subtitleFont.fontStyle = @"normal"; //正常，斜体
-            subtitleFont.fontWeight = 400;
-            
-            NSString *fileName = FontArray[textIndex];
-            NSString *path = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension] ofType:fileName.pathExtension];
-            
-            subtitleFont.fontFamily = path;
-            
             titleStyle.subtitleFont = subtitleFont;
+            
             MgcMixSubtitleStroke *titleStroke = [MgcMixSubtitleStroke new];
             titleStroke.strokeWidth = 0;
             titleStroke.strokeColor = @"#00000000";
@@ -488,20 +474,23 @@
             titleShadow.shadowColor = @"#00000000";
             titleShadow.degree = 0.0;
             titleShadow.distance = 0;
-            
+    
             titleStyle.subtitleShadow = titleShadow;
             titleStyle.subtitleStroke = titleStroke;
-            
             titleStyle.bgColor = @"#00000000";
-//            titleStyle.align = @"right";
-            titleStyle.isVertical = NO;
-            titleStyle.letterPadding = 0;
-            titleStyle.linePadding = 0;
             titleStyle.padding = 0;
-
-            mixTitle.subtitleStyle = titleStyle;
+            titleStyle.isVertical = NO; //是否垂直方向
             
-
+            MgcMixSubtitle *mixTitle = [MgcMixSubtitle new];
+            
+            mixTitle.subtitleStyle = titleStyle;
+            mixTitle.text = showText;
+            mixTitle.rotation = 0;
+            mixTitle.duration = 2000;//必须有值，否则动画不生效
+            mixTitle.scale = scale;
+            //获取word布局数组
+            mixTitle.wordLayout = [BPMixModelTool getWordLayoutListFromText:showText Font:textFont LetterPadding:0 LinePadding:0 MaxWidth:self.model.config.width - layout.rx MaxHeight:300 isVertical:titleStyle.isVertical];
+            
             MgcMixSubtitleAnimate *mixAnimate = [MgcMixSubtitleAnimate new];
             MgcMixSubtitleAnimateInfo *animateInfo = [MgcMixSubtitleAnimateInfo new];
             animateInfo.type = @"circleFlyIn";
@@ -513,7 +502,7 @@
 
             [newModel.attaches.views addObject:magicTitleView];
             
-//            [self.videoPlayer addMixSubtitle:magicTitleView];
+//            [self.videoPlayer addMixSubtitle:magicTitleView];//不用重新播放
 //            return;
             position = (int)magicTitleView.attachTime;
         }
@@ -712,201 +701,5 @@
 - (void)dealloc {
     [self.videoPlayer stop];
 }
-
-
-/*
- EnterAnimateType_e MixEnterAnimateType(std::string type) {
-     if (type == "fadeIn") {
-         
-     }
-     if (type == "karaokeFloor") {
-         
-     }
-     if (type == "karaoke") {
-         
-     }
-     if (type == "tinyZoomIn") {
-         
-     }
-     if (type == "zoomOut") {
-         
-     }
-     if (type == "tinyZoomOut") {
-         
-     }
-     if (type == "zoomIn") {
-         
-     }
-     if (type == "printer1") {
-         
-     }
-     if (type == "printer2") {
-         
-     }
-     if (type == "printer3") {
-         
-     }
-     if (type == "slideLeft") {
-         
-     }
-     if (type == "slideRight") {
-         
-     }
-     if (type == "slideUp") {
-         
-     }
-     if (type == "slideDown") {
-         
-     }
-     if (type == "sunRise") {
-         
-     }
-     if (type == "eraseRight") {
-         
-     }
-     if (type == "eraseLeft") {
-         
-     }
-     if (type == "eraseUp") {
-         
-     }
-     if (type == "eraseDown") {
-         
-     }
-     if (type == "spinUp") {
-         
-     }
-     if (type == "gatherUp") {
-         
-     }
-     if (type == "circleFlyIn") {
-         
-     }
-     if (type == "circleIn") {
-         
-     }
-     
- }
-
- QuitAnimateType_e MixQuitAnimateType(std::string type) {
-     if (type == "fadeOut") {
-         
-     }
-     if (type == "tinyZoomIn") {
-         
-     }
-     if (type == "zoomOut") {
-         
-     }
-     if (type == "tinyZoomOut") {
-         
-     }
-     if (type == "zoomIn") {
-         
-     }
-     if (type == "printer1") {
-         
-     }
-     if (type == "printer2") {
-         
-     }
-     if (type == "printer3") {
-         
-     }
-     if (type == "slideLeft") {
-         
-     }
-     if (type == "slideRight") {
-         
-     }
-     if (type == "slideUp") {
-         
-     }
-     if (type == "slideDown") {
-         
-     }
-     if (type == "sunSet") {
-         
-     }
-     if (type == "eraseRight") {
-         
-     }
-     if (type == "eraseLeft") {
-         
-     }
-     if (type == "eraseUp") {
-         
-     }
-     if (type == "eraseDown") {
-         
-     }
-     if (type == "spinDown") {
-         
-     }
-     if (type == "spread") {
-         
-     }
-     if (type == "circleFlyOut") {
-         
-     }
-     if (type == "circleOut") {
-         
-     }
-     
- }
-
- CycleAnimateType_e MixCycleAnimateType(std::string type) {
-     if (type == "upDownRolling") {
-         
-     }
-     if (type == "leftRightRolling") {
-         
-     }
-     if (type == "heartBeat") {
-         
-     }
-     if (type == "twinkle") {
-         
-     }
-     if (type == "waggle") {
-         
-     }
-     if (type == "vibrate") {
-         
-     }
-     if (type == "jump") {
-         
-     }
-     if (type == "sway") {
-         
-     }
-     if (type == "flip") {
-         
-     }
-     if (type == "clock") {
-         
-     }
-     if (type == "wiper") {
-         
-     }
-     if (type == "rotate") {
-         
-     }
-     if (type == "wave") {
-         
-     }
-    
- }
-
- Align_e MixAlignType(std::string align){
-     if (align == "right") {
-        
-     } else if (align == "center") {
-         
-     } else {
-         return mix::engine::AlignLeft;
-     }
- }
- */
 
 @end

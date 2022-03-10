@@ -9,21 +9,11 @@
 
 @implementation SHWVideoClip
 
-+ (void)loadSHWVideoClip {
-    NSDictionary *info = [NSBundle mainBundle].infoDictionary;
-    
-    NSArray *valueArr = @[@"pingfang.ttf",
-                          @"Alibaba-PuHuiTi-Medium.ttf",
-                          @"SourceHanSansCN-Heavy.ttf",
-                          @"zhankuqingkehuangyouti.ttf",
-                          @"zhankukuaileti.ttf",
-                          @"zhankuwenyiti.ttf",
-                          @"zhankuxiaoweiLOGO.ttf"];
-    [info setValue:valueArr forKey:@"UIAppFonts"];
-    
++ (void)loadSHWVideoClipOpenHwDecode:(BOOL)decode hwEncode:(BOOL)encode {
+   
     [MgcConfig mgc_setupSDK];
     /// 开启硬解码 硬编码
-    [BPVideoPlayer setupMixHWDecode:YES hwEncode:YES];
+    [BPVideoPlayer setupMixHWDecode:decode hwEncode:encode];
     
 }
 

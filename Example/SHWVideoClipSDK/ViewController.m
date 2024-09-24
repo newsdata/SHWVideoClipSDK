@@ -19,7 +19,7 @@
 @implementation ViewController
 
 //选择本地相册资源 转换成mixwindow 对象
-- (IBAction)selectLocalAsset:(id)sender {
+- (void)selectLocalAsset:(id)sender {
     
     TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc]initWithMaxImagesCount:20 * 60 delegate:self];
     imagePickerVc.allowPickingGif = NO; // 暂不支持 gif
@@ -51,12 +51,12 @@
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:imagePickerVc animated:YES completion:nil];
 }
 //选择云端资源
-- (IBAction)cloudAsset:(id)sender {
+- (void)cloudAsset:(id)sender {
     
     //需要先下载资源到本地，然后转换成 BPMixWindow 对象
     
     //测试视频地址 不一定好用
-    NSString *videoUrl = @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
+    NSString *videoUrl = @"https://media.w3.org/2010/05/sintel/trailer.mp4";
     
     self.downloader = [[BPDownloader alloc] initWithUrl: videoUrl localPath:nil];
    

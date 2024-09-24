@@ -1,7 +1,7 @@
-
+ 
 Pod::Spec.new do |s|
   s.name             = 'SHWVideoClipSDK'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '视频剪辑.'
 
   s.description      = <<-DESC
@@ -14,7 +14,7 @@ A videoClip sdk.
   s.source           = { :git => 'https://github.com/newsdata/SHWVideoClipSDK.git', :tag => s.version.to_s }
   #s.source           = { :path => '.' }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'SHWVideoClipSDK/Classes/*.{h,m}'
   s.public_header_files = 'SHWVideoClipSDK/Classes/*.h'
@@ -32,19 +32,20 @@ A videoClip sdk.
   s.frameworks = 'UIKit'
   
   s.dependency 'AFNetworking'
-  s.dependency 'Masonry', '1.1.0'
-  s.dependency 'MBProgressHUD', '~>1.1.0'
-  s.dependency 'JXCategoryView', '1.5.2'
-  s.dependency 'RealReachability', '1.3.0'
-  s.dependency 'BlocksKit', '2.2.5'
-  s.dependency 'Aspects', '1.4.1'
-  s.dependency 'YYCategories', '1.0.4'
-  s.dependency 'QTEventBus', '0.4.0'
-  s.dependency 'YYCache', '1.0.4'
+  s.dependency 'Masonry', '>=1.1.0'
+  s.dependency 'MBProgressHUD', '>=1.1.0'
+  s.dependency 'JXCategoryView', '>=1.5.2'
+  s.dependency 'BlocksKit', '>=2.2.5'
+  s.dependency 'Aspects', '>=1.4.1'
+  s.dependency 'QTEventBus', '>=0.4.0'
   s.dependency 'SSZipArchive'
 
   s.dependency 'MJExtension'
   s.dependency 'SHWMixMobile'
   s.dependency 'Realm'
+  
+  s.dependency 'RealReachability', '>=1.3.0'
+  s.dependency 'YYCache', '>=1.0.4'
+  s.dependency 'YYCategories', '>=1.0.4'
   
 end

@@ -42,7 +42,7 @@ A videoClip sdk.
 
   s.dependency 'MJExtension'
   s.dependency 'SHWMixMobile'
-  s.dependency 'Realm'
+  s.dependency 'Realm', '>=10.52.2'
   
   s.dependency 'RealReachability', '>=1.3.0'
   s.dependency 'YYCache', '>=1.0.4'

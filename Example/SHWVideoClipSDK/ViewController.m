@@ -14,6 +14,8 @@
 
 @property (nonatomic ,strong) BPDownloader *downloader;
 
+@property (nonatomic, strong) UILabel *label;
+
 @end
 
 @implementation ViewController
@@ -62,6 +64,9 @@
    
     [self.downloader startSessionWithProgressBlock:^(double progress) {
         NSLog(@"download progress = %f", progress);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.label.text = [NSString stringWithFormat:@"进度：%% %.0f", progress];
+        });
         
     } complete:^(NSString * _Nonnull filePath, NSError * _Nullable error) {
         if (!error) {
@@ -121,6 +126,15 @@
     [button2 addTarget:self action:@selector(cloudAsset:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:button2];
+    
+    self.label = [UILabel new];
+    self.label.frame = CGRectMake(30, 250, 120, 44);
+    
+    self.label.text = @"进度：% 0";
+    
+    [self.view addSubview:self.label];
+    
+    
 }
 
 /*  添加素材

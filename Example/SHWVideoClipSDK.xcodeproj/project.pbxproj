@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4DFDB3D148E7467F03AE736D /* Pods_SHWVideoClipSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F320E3DD7CD461F784E40ABB /* Pods_SHWVideoClipSDK_Example.framework */; };
-		5E73476E02025C2F2A3296C7 /* Pods_SHWVideoClipSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06B99ED299663F52CF5964D /* Pods_SHWVideoClipSDK_Tests.framework */; };
-		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		1AA9F992260DE8304B93556D /* Pods_SHWVideoClipSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1163EA8A8AFE3293648FE9EE /* Pods_SHWVideoClipSDK_Example.framework */; };
+		1C7F568C34021301DB31921B /* Pods_SHWVideoClipSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFDD7B1AFD14AB9346BB2D9 /* Pods_SHWVideoClipSDK_Tests.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
@@ -38,6 +37,7 @@
 		F46FEDA92784485C002404B3 /* pingfang.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F46FEDA02784485C002404B3 /* pingfang.ttf */; };
 		F46FEDAA2784485C002404B3 /* zhankuxiaoweiLOGO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F46FEDA12784485C002404B3 /* zhankuxiaoweiLOGO.ttf */; };
 		F46FEDAB2784485C002404B3 /* Alibaba-PuHuiTi-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F46FEDA22784485C002404B3 /* Alibaba-PuHuiTi-Medium.ttf */; };
+		F4A106F42CA50AA200AF6EBA /* ZFNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A106F32CA50AA200AF6EBA /* ZFNormalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +52,11 @@
 
 /* Begin PBXFileReference section */
 		06A111E9695F00EE12651D1A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1163EA8A8AFE3293648FE9EE /* Pods_SHWVideoClipSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHWVideoClipSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D2412139B0A02FE67E7021 /* Pods-SHWVideoClipSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWVideoClipSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SHWVideoClipSDK_Tests/Pods-SHWVideoClipSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C85B3C5CB283B0E8485D69D /* Pods-SHWVideoClipSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWVideoClipSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-SHWVideoClipSDK_Tests/Pods-SHWVideoClipSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3D0A5DEADC037A6B5EAB4A51 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		5BFDD7B1AFD14AB9346BB2D9 /* Pods_SHWVideoClipSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHWVideoClipSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* SHWVideoClipSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHWVideoClipSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,9 +80,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93ACB913352C24010F6506C7 /* Pods-SHWVideoClipSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWVideoClipSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-SHWVideoClipSDK_Example/Pods-SHWVideoClipSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9DF978BEE9CA9262C8D0509F /* SHWVideoClipSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SHWVideoClipSDK.podspec; path = ../SHWVideoClipSDK.podspec; sourceTree = "<group>"; };
-		A06B99ED299663F52CF5964D /* Pods_SHWVideoClipSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHWVideoClipSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB59E123A0B0430E8B20DC7B /* Pods-SHWVideoClipSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHWVideoClipSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-SHWVideoClipSDK_Example/Pods-SHWVideoClipSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F320E3DD7CD461F784E40ABB /* Pods_SHWVideoClipSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHWVideoClipSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46FED82278430EE002404B3 /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
 		F46FED83278430EE002404B3 /* icon_hzw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon_hzw.jpg; sourceTree = "<group>"; };
 		F46FED84278430EE002404B3 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
@@ -99,6 +99,8 @@
 		F46FEDA02784485C002404B3 /* pingfang.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pingfang.ttf; sourceTree = "<group>"; };
 		F46FEDA12784485C002404B3 /* zhankuxiaoweiLOGO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zhankuxiaoweiLOGO.ttf; sourceTree = "<group>"; };
 		F46FEDA22784485C002404B3 /* Alibaba-PuHuiTi-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alibaba-PuHuiTi-Medium.ttf"; sourceTree = "<group>"; };
+		F4A106F22CA50AA200AF6EBA /* ZFNormalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFNormalViewController.h; sourceTree = "<group>"; };
+		F4A106F32CA50AA200AF6EBA /* ZFNormalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFNormalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
-				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				4DFDB3D148E7467F03AE736D /* Pods_SHWVideoClipSDK_Example.framework in Frameworks */,
+				1AA9F992260DE8304B93556D /* Pods_SHWVideoClipSDK_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +120,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				5E73476E02025C2F2A3296C7 /* Pods_SHWVideoClipSDK_Tests.framework in Frameworks */,
+				1C7F568C34021301DB31921B /* Pods_SHWVideoClipSDK_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,8 +166,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				F320E3DD7CD461F784E40ABB /* Pods_SHWVideoClipSDK_Example.framework */,
-				A06B99ED299663F52CF5964D /* Pods_SHWVideoClipSDK_Tests.framework */,
+				1163EA8A8AFE3293648FE9EE /* Pods_SHWVideoClipSDK_Example.framework */,
+				5BFDD7B1AFD14AB9346BB2D9 /* Pods_SHWVideoClipSDK_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,6 +175,8 @@
 		6003F593195388D20070C39A /* Example for SHWVideoClipSDK */ = {
 			isa = PBXGroup;
 			children = (
+				F4A106F22CA50AA200AF6EBA /* ZFNormalViewController.h */,
+				F4A106F32CA50AA200AF6EBA /* ZFNormalViewController.m */,
 				6003F59C195388D20070C39A /* SHWAppDelegate.h */,
 				6003F59D195388D20070C39A /* SHWAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -384,10 +387,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SHWVideoClipSDK_Example/Pods-SHWVideoClipSDK_Example-resources.sh",
 				"${PODS_ROOT}/../../SHWVideoClipSDK/Assets/SWFilterBundle.bundle",
+				"${PODS_ROOT}/ZFPlayer/ZFPlayer/Classes/ControlView/ZFPlayer.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SWFilterBundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZFPlayer.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -445,25 +450,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SHWVideoClipSDK_Example/Pods-SHWVideoClipSDK_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${PODS_ROOT}/../../SHWVideoClipSDK/Frameworks/SHWJianBeiMix.framework",
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
-				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
-				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SHWJianBeiMix.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -479,6 +476,7 @@
 			files = (
 				6003F59E195388D20070C39A /* SHWAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* SHWViewController.m in Sources */,
+				F4A106F42CA50AA200AF6EBA /* ZFNormalViewController.m in Sources */,
 				F46FED9727843205002404B3 /* EditCollectionViewCell.m in Sources */,
 				F46FED91278431F6002404B3 /* ViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
@@ -616,8 +614,71 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHWVideoClipSDK/SHWVideoClipSDK-Prefix.pch";
 				INFOPLIST_FILE = "SHWVideoClipSDK/SHWVideoClipSDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"avcodec\"",
+					"-l\"avdevice\"",
+					"-l\"avfilter\"",
+					"-l\"avformat\"",
+					"-l\"avutil\"",
+					"-l\"bz2\"",
+					"-l\"c++\"",
+					"-l\"compression\"",
+					"-l\"de265\"",
+					"-l\"fdk-aac\"",
+					"-l\"heif\"",
+					"-l\"iconv\"",
+					"-l\"pathkit\"",
+					"-l\"postproc\"",
+					"-l\"skia\"",
+					"-l\"swresample\"",
+					"-l\"swscale\"",
+					"-l\"x264\"",
+					"-l\"yuv\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"PhotosUI\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SHWJianBeiMix\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"VideoToolbox\"",
+					"-weak_framework",
+					"\"UIKit\"",
+					"-ld_classic",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -637,8 +698,71 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHWVideoClipSDK/SHWVideoClipSDK-Prefix.pch";
 				INFOPLIST_FILE = "SHWVideoClipSDK/SHWVideoClipSDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"avcodec\"",
+					"-l\"avdevice\"",
+					"-l\"avfilter\"",
+					"-l\"avformat\"",
+					"-l\"avutil\"",
+					"-l\"bz2\"",
+					"-l\"c++\"",
+					"-l\"compression\"",
+					"-l\"de265\"",
+					"-l\"fdk-aac\"",
+					"-l\"heif\"",
+					"-l\"iconv\"",
+					"-l\"pathkit\"",
+					"-l\"postproc\"",
+					"-l\"skia\"",
+					"-l\"swresample\"",
+					"-l\"swscale\"",
+					"-l\"x264\"",
+					"-l\"yuv\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"PhotosUI\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SHWJianBeiMix\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"VideoToolbox\"",
+					"-weak_framework",
+					"\"UIKit\"",
+					"-ld_classic",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

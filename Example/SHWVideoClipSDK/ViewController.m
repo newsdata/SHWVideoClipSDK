@@ -10,9 +10,11 @@
 #import <SHWVideoClipSDK/SHWVideoClip.h>
 #import "EditViewController.h"
 
+#import "ZFNormalViewController.h"
+
 @interface ViewController ()<TZImagePickerControllerDelegate>
 
-@property (nonatomic ,strong) BPDownloader *downloader;
+//@property (nonatomic ,strong) BPDownloader *downloader;
 
 @end
 
@@ -55,26 +57,30 @@
     
     //需要先下载资源到本地，然后转换成 BPMixWindow 对象
     
+    /// 自行下载
+    
     //测试视频地址 不一定好用
     NSString *videoUrl = @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
     
-    self.downloader = [[BPDownloader alloc] initWithUrl: videoUrl localPath:nil];
+//    self.downloader = [[BPDownloader alloc] initWithUrl: videoUrl localPath:nil];
    
-    [self.downloader startSessionWithProgressBlock:^(double progress) {
-        NSLog(@"download progress = %f", progress);
+//    [self.downloader startSessionWithProgressBlock:^(double progress) {
+//        NSLog(@"download progress = %f", progress);
         
-    } complete:^(NSString * _Nonnull filePath, NSError * _Nullable error) {
-        if (!error) {
+//    } complete:^(NSString * _Nonnull filePath, NSError * _Nullable error) {
+//        if (!error) {
            
-            NSLog(@"download success = %@", filePath);
+//            NSLog(@"download success = %@", filePath);
             
-            NSString *localPath = filePath;
+            NSString *localPath = @"";
             
-            AVURLAsset * asset = [AVURLAsset assetWithURL:[NSURL fileURLWithPath:filePath]];
+            AVURLAsset * asset = [AVURLAsset assetWithURL:[NSURL fileURLWithPath:localPath]];
             CMTime   time = [asset duration];
             int duration = ceil(time.value * 1000/time.timescale);
             
-            NSString *relativePath = [BPDownloader getRelativePathWithLocalPath:filePath];
+            /// 获取下载地址
+            NSString *relativePath = @"";
+//            NSString *relativePath = [BPDownloader getRelativePathWithLocalPath:filePath];
             
             NSMutableArray *array = [NSMutableArray arrayWithCapacity:10];
             
@@ -89,15 +95,15 @@
             
             BPMixWindow * mixWindowModel = [[BPMixWindow alloc] initWithVidoes:array];
             
-            EditViewController* editVC = [[EditViewController alloc]init];
-            editVC.windowModel = mixWindowModel;
+//            EditViewController* editVC = [[EditViewController alloc]init];
+//            editVC.windowModel = mixWindowModel;
+//            
+//            [self.navigationController pushViewController:editVC animated:YES];
             
-            [self.navigationController pushViewController:editVC animated:YES];
-            
-        }else {
-            NSLog(@"download failed");
-        }
-    }];
+//        }else {
+//            NSLog(@"download failed");
+//        }
+//    }];
 }
 
 
@@ -121,6 +127,21 @@
     [button2 addTarget:self action:@selector(cloudAsset:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:button2];
+    
+    
+    UIButton *button3 = [UIButton buttonWithType:UIButtonTypeSystem];
+    button3.frame = CGRectMake(80, 250, 120, 44);
+    [button3 setTitle:@"打开ZFPlayer" forState:UIControlStateNormal];
+    button3.titleLabel.font = [UIFont systemFontOfSize:18];
+    [button3 addTarget:self action:@selector(openZFPlayer:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:button3];
+}
+
+
+- (void)openZFPlayer:(UIButton *)btn {
+    ZFNormalViewController *vc = [[ZFNormalViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*  添加素材

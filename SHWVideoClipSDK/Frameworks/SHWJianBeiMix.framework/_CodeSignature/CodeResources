@@ -20,10 +20,6 @@
 		<data>
 		6MTwuQ9bZPkjeJqbZ9BcGNN9YB4=
 		</data>
-		<key>Headers/BPCommonAlertView.h</key>
-		<data>
-		1uP1Ihvxel5uE8wSdex0KuZUXNs=
-		</data>
 		<key>Headers/BPCommonMethod.h</key>
 		<data>
 		T8kZ5lGal9lB2FxLWmF2vQNNne4=
@@ -39,10 +35,6 @@
 		<key>Headers/BPDatabaseConection.h</key>
 		<data>
 		NIJUMXRr7jF1MfsCIWgcvdoFttw=
-		</data>
-		<key>Headers/BPDownloader.h</key>
-		<data>
-		PsyFL3upysGDVcSmO/ARMEZvyMk=
 		</data>
 		<key>Headers/BPFileUtil.h</key>
 		<data>
@@ -212,10 +204,6 @@
 		<data>
 		OjHnxLI99nbf3Tq4FapEE7mliV4=
 		</data>
-		<key>Headers/MGCNetService.h</key>
-		<data>
-		yRILmZU4hxPHEGckEo/00ht2qh4=
-		</data>
 		<key>Headers/MGCPixelBufferDelegate.h</key>
 		<data>
 		rbJau4O5s1TADwBWUCeRMzWyQZw=
@@ -314,7 +302,7 @@
 		</data>
 		<key>Headers/SHWJianBeiMix.h</key>
 		<data>
-		QSASmYv5YUDru1zheVGkMHLcH+U=
+		anPviFtugf9nB1uKY3k9LuNn7MM=
 		</data>
 		<key>Headers/YYThreadSafeArray.h</key>
 		<data>
@@ -322,7 +310,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EqeZ1sr0hHN2IkuSGn2/RlRt68U=
+		F/2ERGkoafLrqF3yQYPBAqupWOI=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -330,17 +318,13 @@
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		U4UiBC5IX+tl9aMXwnz1CK4RbVs=
+		8HdUeZi9jt9r9M9yg7ZAxbD2Bpg=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Headers/BPAudioFrame.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			dKrkCio1NPw+T1bQ+jhvjV/V2VU=
-			</data>
 			<key>hash2</key>
 			<data>
 			46GSGph/tsgJ2Fh0VT0ME6e3PpAli0CIg2l2ZEtKSVs=
@@ -348,10 +332,6 @@
 		</dict>
 		<key>Headers/BPAudioManager.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Y6YsZ/Uydtb1MCszWTCqUSlmhhw=
-			</data>
 			<key>hash2</key>
 			<data>
 			axdkRMAUiIAy1U3CMLPe0Vdzt/gnyMyHexWAPAmKgyU=
@@ -359,10 +339,6 @@
 		</dict>
 		<key>Headers/BPAudioRenderableImp.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			yxDovfEk9QVARrudx9p1OPxl8hI=
-			</data>
 			<key>hash2</key>
 			<data>
 			0mPddEIcC0eJMD7uL2dXY/YyrDRBgetXrvtfjdnhooA=
@@ -370,32 +346,13 @@
 		</dict>
 		<key>Headers/BPAudioSessionManager.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			6MTwuQ9bZPkjeJqbZ9BcGNN9YB4=
-			</data>
 			<key>hash2</key>
 			<data>
 			Vj0l6JBCrWPJUctIOwqbFLwfxEJxrVRSxS9rvx4fkSM=
 			</data>
 		</dict>
-		<key>Headers/BPCommonAlertView.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1uP1Ihvxel5uE8wSdex0KuZUXNs=
-			</data>
-			<key>hash2</key>
-			<data>
-			4sOMWaWwxnoWW2RD7w6PQYqRr+l1ThJVm8nrQcqNTWI=
-			</data>
-		</dict>
 		<key>Headers/BPCommonMethod.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			T8kZ5lGal9lB2FxLWmF2vQNNne4=
-			</data>
 			<key>hash2</key>
 			<data>
 			mkRR3smxHVzhyP589ktVNUZhIDSG+PRoJbq8PfPuoyw=
@@ -403,10 +360,6 @@
 		</dict>
 		<key>Headers/BPCrashUtil.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			+MuH5Wpe+849/a4SfF/GCP6Vzjg=
-			</data>
 			<key>hash2</key>
 			<data>
 			3V0ONIbsBGKT2bC8NCe5dMPS2glRLi+pqT+25iOvx0g=
@@ -414,10 +367,6 @@
 		</dict>
 		<key>Headers/BPCustomFontModel.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			m4JS26pwEel5Xco3vJrumRWsMQo=
-			</data>
 			<key>hash2</key>
 			<data>
 			jJZLugyYpCcrj/zjcFKIdg31frQdbTbad00cr/GXSrc=
@@ -425,32 +374,13 @@
 		</dict>
 		<key>Headers/BPDatabaseConection.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			NIJUMXRr7jF1MfsCIWgcvdoFttw=
-			</data>
 			<key>hash2</key>
 			<data>
 			SNugs1r8soTgBKFk5DTMsMWrdvXA7tKo/Q9+u0lha84=
 			</data>
 		</dict>
-		<key>Headers/BPDownloader.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			PsyFL3upysGDVcSmO/ARMEZvyMk=
-			</data>
-			<key>hash2</key>
-			<data>
-			rLybh+Ni3Ue2OPignF2kyma9IhofP9p1R/Cr9wBVP1o=
-			</data>
-		</dict>
 		<key>Headers/BPFileUtil.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			4o2nnF076LnIQH6CCaeQ5khMyp4=
-			</data>
 			<key>hash2</key>
 			<data>
 			Nzf8vwOFKNtTtU4p4q7wKCXzFxnkFDCHokzgwUfUJRk=
@@ -458,10 +388,6 @@
 		</dict>
 		<key>Headers/BPMixAudio.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			b/gdUaz3t4erImPzH0yaYsBR6l4=
-			</data>
 			<key>hash2</key>
 			<data>
 			gN8YcPshdo4afqS3tLveuNlHMmUklFq1BOwutnTAObs=
@@ -469,10 +395,6 @@
 		</dict>
 		<key>Headers/BPMixColorView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			6RBWKBXhxkEiaSfRlKJEaA2D98Q=
-			</data>
 			<key>hash2</key>
 			<data>
 			KNS708npLtbuq3rG6HiV0yCO5D9cZ7z1xFv7Y/YEwro=
@@ -480,10 +402,6 @@
 		</dict>
 		<key>Headers/BPMixConfig.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			tB2gLM9FF1jri8s/O/pRR36DdOU=
-			</data>
 			<key>hash2</key>
 			<data>
 			UA/aKOwUDnhcOT2sBP1uxptNXNrC2+YGhlIAXE4cTGk=
@@ -491,10 +409,6 @@
 		</dict>
 		<key>Headers/BPMixCrop.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			90OMeOOnASwBPLEOz4t2xzYIF1M=
-			</data>
 			<key>hash2</key>
 			<data>
 			9jcTqTsLEHqbCl1mrSVnMAgwgZaHhH5TAI4x1/YMYtU=
@@ -502,10 +416,6 @@
 		</dict>
 		<key>Headers/BPMixDataConvert.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			BO5DFfkOh57u0mX2eGSlb0M48yw=
-			</data>
 			<key>hash2</key>
 			<data>
 			do0l9t4PC/tgdzS1iqDU9Io3/Ex7qniNCsqmvczWm8E=
@@ -513,10 +423,6 @@
 		</dict>
 		<key>Headers/BPMixDebugger.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			evyq9YvvwxVCT+kfetvYsqRigCQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			rPRf2K2kxqakS9Me8nlzomX8glI+UaK7qrnCoDB6XJw=
@@ -524,10 +430,6 @@
 		</dict>
 		<key>Headers/BPMixFilter.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			nHEXcU4bh5KcnNLWMU5EG4Pw/t0=
-			</data>
 			<key>hash2</key>
 			<data>
 			exOzg2ziXfX7e3VA+4CFuilTI9OqJfyJ7v0su0PM0zo=
@@ -535,10 +437,6 @@
 		</dict>
 		<key>Headers/BPMixFilterDefine.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			utEmpbFdaLt3mkKwfGwz2GrBTVE=
-			</data>
 			<key>hash2</key>
 			<data>
 			m2j3y6FBiNHWi7TuNf62FaZUex/ixPM1FfqJmfu3Gx4=
@@ -546,10 +444,6 @@
 		</dict>
 		<key>Headers/BPMixFont.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			em6sx7+ZCa7HvKHSbexK0hu1VQE=
-			</data>
 			<key>hash2</key>
 			<data>
 			lt8Ur40mZjXhGF0ohbbinjCwyEP7yRjPQTT+rPLQsk8=
@@ -557,10 +451,6 @@
 		</dict>
 		<key>Headers/BPMixFontShadow.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			waiLO0t4oHFPQ1duL9VHHiGXaoo=
-			</data>
 			<key>hash2</key>
 			<data>
 			/bgUqvEsnuQXlRU/Ec+0y4WEsqYMP58dI4W3lV4sWjs=
@@ -568,10 +458,6 @@
 		</dict>
 		<key>Headers/BPMixGifView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			v/0FVs9OkXcKpZEhCpoKoIASwyM=
-			</data>
 			<key>hash2</key>
 			<data>
 			PYmTvc7RKiw25zV2n1gARPCczUYGlHnlyP5W30a5FF4=
@@ -579,10 +465,6 @@
 		</dict>
 		<key>Headers/BPMixImageView+Util.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			NM8fzGQ3a+UDhvDXbndoNJJYruM=
-			</data>
 			<key>hash2</key>
 			<data>
 			6bhg4K3W84/DGJ3oiRqQBXc853zPGkx4WHPGrADBReA=
@@ -590,10 +472,6 @@
 		</dict>
 		<key>Headers/BPMixImageView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			WhRcrjxDRZY5kPNTEDI9e5yZWMk=
-			</data>
 			<key>hash2</key>
 			<data>
 			U7U6HPDBv9pTaZDvJAll3bY8FE5plZ1DnoV+qcCqqJg=
@@ -601,10 +479,6 @@
 		</dict>
 		<key>Headers/BPMixLayout.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			hhaAKPLbnSLwCBRxPOHfj7i6WpE=
-			</data>
 			<key>hash2</key>
 			<data>
 			tsrnX1YeHTbfkfVIKKNs4FvhWqLojEVwLFr97QGXjNU=
@@ -612,10 +486,6 @@
 		</dict>
 		<key>Headers/BPMixMediaSource.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			yy75LlTYbrHRbvM4Av/KQfHJRPQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			YFOKGtMIGFPg7wLPG7GLMkhXPRO6thM5xzDbG18qwYo=
@@ -623,10 +493,6 @@
 		</dict>
 		<key>Headers/BPMixMediaView+Util.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			KFhsWbkpQMhhCmrAaPZG4RAJXZA=
-			</data>
 			<key>hash2</key>
 			<data>
 			Eh9fYyCM6jw9N2dn9n83cHYrsYHo/wJk6dlm54gFBRI=
@@ -634,10 +500,6 @@
 		</dict>
 		<key>Headers/BPMixMediaView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			smK8eJU+Lm9Kz5EnWn4fe7nLDhU=
-			</data>
 			<key>hash2</key>
 			<data>
 			ooMgHj1f9EwRM74PnEQIT3o9uX5k/l8xe35mTxClrn4=
@@ -645,10 +507,6 @@
 		</dict>
 		<key>Headers/BPMixModelTool.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			F9iFGT47a+L1wqa8Dfz5EdDkN9U=
-			</data>
 			<key>hash2</key>
 			<data>
 			HleieRjMen2kjL1tLsJJ5lv7peqlnEPVMQpQEzwNphc=
@@ -656,10 +514,6 @@
 		</dict>
 		<key>Headers/BPMixRotation.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			9jKQ7PppmBJTtE37qDVDoiqZHg0=
-			</data>
 			<key>hash2</key>
 			<data>
 			5mmA6grA6++QBOyba0lHivFVbkT6gNEPmvb1h9/jawM=
@@ -667,10 +521,6 @@
 		</dict>
 		<key>Headers/BPMixSubtitleView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			PCIMQbngmUc3c0zEO1hqhReTLjo=
-			</data>
 			<key>hash2</key>
 			<data>
 			gC6lFmuLDYwvn0ioeJvXxVzd1o8ci8iy6LUs70Xu9Pk=
@@ -678,10 +528,6 @@
 		</dict>
 		<key>Headers/BPMixSvgView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			iDBOS/Sm3atvLVzpP86pkthTjtc=
-			</data>
 			<key>hash2</key>
 			<data>
 			luB3iN8BjgXJ2Z7Pblo+MIu7zaG2M9+Fo0z2KPT7UWQ=
@@ -689,10 +535,6 @@
 		</dict>
 		<key>Headers/BPMixTransitionView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ukMQ2Q++Z5SKNgjBxJ3MHI9zTp8=
-			</data>
 			<key>hash2</key>
 			<data>
 			Veu9IseNpQnzmq/uQ/NxsO3EiMLbzSXuQtiCcfvp7uc=
@@ -700,10 +542,6 @@
 		</dict>
 		<key>Headers/BPMixVideoFrame.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			xeahlEoDLNHrEnpJ2k0e4kBnqac=
-			</data>
 			<key>hash2</key>
 			<data>
 			zmJ65ZuzntEfPsRxXvYRTPlYi7xFORYNByySfnhdosM=
@@ -711,10 +549,6 @@
 		</dict>
 		<key>Headers/BPMixVideoView+Util.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			/Pl3q3zVLTdcd8qWX9VSiW0pGYA=
-			</data>
 			<key>hash2</key>
 			<data>
 			OyNUDyOn5hgURO3iRPWAWMP0M5UFid+ASe4ngG4yj78=
@@ -722,10 +556,6 @@
 		</dict>
 		<key>Headers/BPMixVideoView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			fiPOJ6R1u9wmK9rGBaHFNk2s88s=
-			</data>
 			<key>hash2</key>
 			<data>
 			OX5iu+QcmvsLzhLhNmaick/Vt7DwCreZ990BxDVxlAw=
@@ -733,10 +563,6 @@
 		</dict>
 		<key>Headers/BPMixView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			MGB4aqUttYqg5yhE30i35Lus04s=
-			</data>
 			<key>hash2</key>
 			<data>
 			ZdxOLBzIrggrm6dL6EsoN8CAkFiVInPPOp6DSRsn9PM=
@@ -744,10 +570,6 @@
 		</dict>
 		<key>Headers/BPMixViewGroup.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			BtiQ4lCCdoHmZRxuBFW+3FOLGow=
-			</data>
 			<key>hash2</key>
 			<data>
 			4LgmenW3zrC/K329L7fkcWjO+b5TCo7QR3YSAollu/g=
@@ -755,10 +577,6 @@
 		</dict>
 		<key>Headers/BPMixWindow+Adjust.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			iNs8Hd63VACEjQY2FIuUu941AiE=
-			</data>
 			<key>hash2</key>
 			<data>
 			Zkl9nB4BCvJiZgwvLLzyrSZmef2MS032A8qQFRaK4bs=
@@ -766,10 +584,6 @@
 		</dict>
 		<key>Headers/BPMixWindow+Util.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Ypg4+G9R0gwqkD8cxQH8hvXwzUY=
-			</data>
 			<key>hash2</key>
 			<data>
 			dSxUR5KWlnn+aWSJtAP+4AoW8/I4ry8KRIKgKbF/iDs=
@@ -777,10 +591,6 @@
 		</dict>
 		<key>Headers/BPMixWindow.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			6XnDuNU3Tzpp5LJIGnIlBKtQaI4=
-			</data>
 			<key>hash2</key>
 			<data>
 			Uz4FFWXUQrFZCRY4XwC0pXBVYOKIhFTKZNJ1KBRwAGA=
@@ -788,10 +598,6 @@
 		</dict>
 		<key>Headers/BPPhotoAssetUtil.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			K+qqnkLUz/UlK4oMgwYu9p4G/JA=
-			</data>
 			<key>hash2</key>
 			<data>
 			GsUmyKzJplVQkYSl84kOeSc77kbdEQCguhJJg8wkD3M=
@@ -799,10 +605,6 @@
 		</dict>
 		<key>Headers/BPRenderable.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			+dbNbUzIscDmzPmmEpa4JkT2Rm4=
-			</data>
 			<key>hash2</key>
 			<data>
 			6iteC1OgWSZqPML0Tr19SIc7QQkKmDmmrCq5i5jL7G0=
@@ -810,10 +612,6 @@
 		</dict>
 		<key>Headers/BPTransitionTypeConvert.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			wAcL9+HEo17BzqW0mYNdQ24jNTw=
-			</data>
 			<key>hash2</key>
 			<data>
 			MrN0bvAj4dU+JI1kDkX3P3GvGUYcLfjNE8fIqI02Kts=
@@ -821,10 +619,6 @@
 		</dict>
 		<key>Headers/BPVideoConverter.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			cVTDBul5ZJ/xqzE5wDVUuXNv0KE=
-			</data>
 			<key>hash2</key>
 			<data>
 			+cBRNUJVzOcR7riEqVqaw+NlG4GELCgShXZFNxQKsH0=
@@ -832,10 +626,6 @@
 		</dict>
 		<key>Headers/BPVideoFileHandler.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			x3yjr5FMfjflPfI1KSLRDRNs5EA=
-			</data>
 			<key>hash2</key>
 			<data>
 			p79gweLbwse1OJa2RYv8Vu5srtLFdR88Nj1S1OHa0KQ=
@@ -843,10 +633,6 @@
 		</dict>
 		<key>Headers/BPVideoMaskTypeDefine.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			tyHbNLnWSoatvlMOOvzZIwPQU4Q=
-			</data>
 			<key>hash2</key>
 			<data>
 			P3wFhq7hzmkkx35iUdak4iahVkRHvUgfH9EGj8nrJ1s=
@@ -854,10 +640,6 @@
 		</dict>
 		<key>Headers/BPVideoPlayer.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			2Vtt4MGEgQ9kOlfiFmh98jcjcvo=
-			</data>
 			<key>hash2</key>
 			<data>
 			xk5G4W1ZJYqyUDwnP0/2qKHjbxHrtaNtYs9GyDLhRWU=
@@ -865,10 +647,6 @@
 		</dict>
 		<key>Headers/BPVideoPlayerState.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			JOfNRSCLyRIQhaYFneikCm+Kum0=
-			</data>
 			<key>hash2</key>
 			<data>
 			i7aDlunDbPxd/pL5FldRgnSa4dSgkS8wLfL8SmyRgWg=
@@ -876,10 +654,6 @@
 		</dict>
 		<key>Headers/BPZoomTypeConvert.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			f7q1VUTuS9C8FyTM6N4mbcZ3iyc=
-			</data>
 			<key>hash2</key>
 			<data>
 			A2KXtm8DGD+ZckzZPDpHLVxgAFdIHN2nRLEuK1V4RAg=
@@ -887,10 +661,6 @@
 		</dict>
 		<key>Headers/MGCCommonMethod.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			M923QVynd6saWWBedVZ4a3R7gxY=
-			</data>
 			<key>hash2</key>
 			<data>
 			uhXMZF/eVX9qux9SDDcc/HqSSgqqNK6lA+ADWn1mxaU=
@@ -898,32 +668,13 @@
 		</dict>
 		<key>Headers/MGCCountTimer.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			OjHnxLI99nbf3Tq4FapEE7mliV4=
-			</data>
 			<key>hash2</key>
 			<data>
 			kWOOSQYtAfGqX0I+EZHNpIEdk3jx17ITg2n1EzV8CZU=
 			</data>
 		</dict>
-		<key>Headers/MGCNetService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			yRILmZU4hxPHEGckEo/00ht2qh4=
-			</data>
-			<key>hash2</key>
-			<data>
-			VOcAHFyZk7j1v/wsk2n4lrdn5hOm4wlUyQ5mRmsghHQ=
-			</data>
-		</dict>
 		<key>Headers/MGCPixelBufferDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rbJau4O5s1TADwBWUCeRMzWyQZw=
-			</data>
 			<key>hash2</key>
 			<data>
 			E+rs2QigBdCKhbYLLrvKp36b20jBFuWGCzm/NbRR5JE=
@@ -931,10 +682,6 @@
 		</dict>
 		<key>Headers/MgcAssetEncoder.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Q/dS60d+0B1qw56knz38WVu/vPQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			j/j53ECBIGtM6YCP9tRkFfBWBLQe8sfGHDlY9Pm4iRc=
@@ -942,10 +689,6 @@
 		</dict>
 		<key>Headers/MgcAudioExtractor.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rIop6odYIyDi4/0eqwyzsueZqqw=
-			</data>
 			<key>hash2</key>
 			<data>
 			nKLxzyi760yPvKbIC+yJ0jDYfgdMCfJHn6FSpybmJpM=
@@ -953,10 +696,6 @@
 		</dict>
 		<key>Headers/MgcAudioVolumeExtractor.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			9zvTp564CJvVLlY7QIfwHPf3alc=
-			</data>
 			<key>hash2</key>
 			<data>
 			qEAr5SWPP7hkX6U6L+RSdZKqiHeV4jdtln5f0XrZKsk=
@@ -964,10 +703,6 @@
 		</dict>
 		<key>Headers/MgcCaptureFrameProvider.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			sLikT7Q/T92C8rYqivw4LGASI/A=
-			</data>
 			<key>hash2</key>
 			<data>
 			jcu68V8yGdQymWaqCb2T+tiNmflRDPyfah0eoInsc3w=
@@ -975,10 +710,6 @@
 		</dict>
 		<key>Headers/MgcCombineProvider.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Jo3rulcPKtInebola65H7ImEMAc=
-			</data>
 			<key>hash2</key>
 			<data>
 			wQoi/Ag0SCel4U7XIolnh7TrfNVYXG7xNQv8qFYJuGs=
@@ -986,10 +717,6 @@
 		</dict>
 		<key>Headers/MgcCombineableImp.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			X4H9Jo0B3RTprUKNkyqvnruZs+w=
-			</data>
 			<key>hash2</key>
 			<data>
 			47DmJzwXMzZFmtWBGqzOHwUHwCXWv3JUgTjWZvWQ1lU=
@@ -997,10 +724,6 @@
 		</dict>
 		<key>Headers/MgcConfig.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			WVDVjLQAzuWSXRSyN14f0ge5Gxg=
-			</data>
 			<key>hash2</key>
 			<data>
 			FC5FgoO9nxYne5PbTY5rnfy+B09Mvp5wANxoWqzm7j4=
@@ -1008,10 +731,6 @@
 		</dict>
 		<key>Headers/MgcCoverProvider.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			UcsWifBcjjs5DbQdh6otcKIF9ug=
-			</data>
 			<key>hash2</key>
 			<data>
 			Dp+CCRNAz/WZxlc+hg1+T7OcojOFh1O2c+kLLHNoRRU=
@@ -1019,10 +738,6 @@
 		</dict>
 		<key>Headers/MgcEncoderableImp.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			EGYppIrGq6cnXGHRGDe0r7qk6k4=
-			</data>
 			<key>hash2</key>
 			<data>
 			Vp+VgxGvcW3yhcKCjwJyX4kzrLOOuOmAhG4t3T0N6c0=
@@ -1030,10 +745,6 @@
 		</dict>
 		<key>Headers/MgcGlobeMacroDefine.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			zLxk5uVhtyz1V+e3afkjimPAX/o=
-			</data>
 			<key>hash2</key>
 			<data>
 			fa8I3DGkrYks5+m6T2x27zGHc1qVUiJ/jCvO3Gwaf4s=
@@ -1041,10 +752,6 @@
 		</dict>
 		<key>Headers/MgcMixSubtitle.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			GWLfqbflzoif0wLTCvyE/auryKQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			s/K8EOccJNdnaw80J0PhcUUXp9ielCMErzgZ/QFWoXM=
@@ -1052,10 +759,6 @@
 		</dict>
 		<key>Headers/MgcMixSubtitleAnimate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			lcWGFIJRK0no/8FJ+54Q7nRSluE=
-			</data>
 			<key>hash2</key>
 			<data>
 			dYOXq7CpHvvjFcpjTLpwOmG4ixy3NaGzhgrBF+bHfQ4=
@@ -1063,10 +766,6 @@
 		</dict>
 		<key>Headers/MgcMixSubtitleFont.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			5wTGy3wQE4EU2mbjqN9VepFtFAc=
-			</data>
 			<key>hash2</key>
 			<data>
 			qbEd+nOuCpsk6NWoSLd6STqa5VpDbqKUcQ7hLis1518=
@@ -1074,10 +773,6 @@
 		</dict>
 		<key>Headers/MgcMixSubtitleShadow.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			6haLbFHPpTIVikNpjXT1XeUdpQg=
-			</data>
 			<key>hash2</key>
 			<data>
 			k3KbdBrxIBNwLVrNuSLZc44Y8SGViYsLfJs7cTxqTyA=
@@ -1085,10 +780,6 @@
 		</dict>
 		<key>Headers/MgcMixSubtitleStroke.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Vt99vQIVJbvkIpBGWjXUUgvHBV4=
-			</data>
 			<key>hash2</key>
 			<data>
 			xpHKLsxxpShKwAQhgPNlq0hZidlMJJPJbCmtuyF9AwI=
@@ -1096,10 +787,6 @@
 		</dict>
 		<key>Headers/MgcMixSubtitleStyle.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			v8YhH6miosqzFL8SOM+RvNDhH64=
-			</data>
 			<key>hash2</key>
 			<data>
 			SGXuVVGJGvqlhq4V6l0LXT30z8aGhpsK4sjN0Fpnn/E=
@@ -1107,10 +794,6 @@
 		</dict>
 		<key>Headers/MgcMixSubtitleView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			49HeEdjdXR6J9mLN4glXhX/Mx9c=
-			</data>
 			<key>hash2</key>
 			<data>
 			MKPJfnWW0Bc1sL6zXMMBDuYUWAcH7SesfmYtK68fq3w=
@@ -1118,10 +801,6 @@
 		</dict>
 		<key>Headers/MgcMixSubtitleWordLayout.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			GFV4daP7Fzw4DmKsfons2Q3f0jc=
-			</data>
 			<key>hash2</key>
 			<data>
 			bpRSpLiCzsAt/xXu5uYTQ4eE2h8vut+n7+INbbB3swk=
@@ -1129,10 +808,6 @@
 		</dict>
 		<key>Headers/MgcRouter.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			MnGDnyyHMnN9t92YIqPB4hS6i/w=
-			</data>
 			<key>hash2</key>
 			<data>
 			rfixkm8zNMriIrIzaBgySH2uGA0OhbuFZWXEBltIXSw=
@@ -1140,10 +815,6 @@
 		</dict>
 		<key>Headers/MgcSvgMaker.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			w2yDcgsRKKigK4bdGcNgh46k+v0=
-			</data>
 			<key>hash2</key>
 			<data>
 			/czkV0QRrPeV38gXhHVudVgg4FJfEa2YLMQ4iSusn6U=
@@ -1151,10 +822,6 @@
 		</dict>
 		<key>Headers/NSMutableArray+BPSafe.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Ice5qijlE5jGXo5DyfIDB7F1WjU=
-			</data>
 			<key>hash2</key>
 			<data>
 			iFFOW4JDtJ0otxQtmwupE5lJ6MhN2fRYPItc1B5J46c=
@@ -1162,10 +829,6 @@
 		</dict>
 		<key>Headers/NSString+SHWString.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			9miRVMywWf8FAV17kJG3ayObFUo=
-			</data>
 			<key>hash2</key>
 			<data>
 			CMfJWBTw7/DZWODpyy1M3NKmEawRVW30KdZh7bnzPA0=
@@ -1173,10 +836,6 @@
 		</dict>
 		<key>Headers/PMAssetEntity.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			lUu3Y+uUtj20861WxuR2yPK03sY=
-			</data>
 			<key>hash2</key>
 			<data>
 			9jPjNx54hvpmbbqPOjvMhR9eKCjdgfUlEXlLYAsa9i0=
@@ -1184,21 +843,13 @@
 		</dict>
 		<key>Headers/SHWJianBeiMix.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			QSASmYv5YUDru1zheVGkMHLcH+U=
-			</data>
 			<key>hash2</key>
 			<data>
-			+gVVj1M6aq0HwXcmNeK3q4lyGlDkvwhCGaQ9LSML0Mg=
+			5u23rW7z6MdJ55+Iwlov0e/ZZVcu8FPxalW1QUy8oVg=
 			</data>
 		</dict>
 		<key>Headers/YYThreadSafeArray.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			N57NFiXrTSQrCXaj0gAUw7CixMs=
-			</data>
 			<key>hash2</key>
 			<data>
 			Ye+PRwR2nxLyMpA2bZaxvAu5Vo3YcXOtxk79/P8VJhk=
@@ -1206,10 +857,6 @@
 		</dict>
 		<key>LICENSE</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			tINWhQnPa5eml8zvzV2d8pzfTx8=
-			</data>
 			<key>hash2</key>
 			<data>
 			5Zu1xca6QmqaxLqf5metFMUWaxKqJb6K8dEisU++LjY=
@@ -1217,13 +864,9 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			U4UiBC5IX+tl9aMXwnz1CK4RbVs=
-			</data>
 			<key>hash2</key>
 			<data>
-			OLkRRsdDVtF9b0C1IAvL7/R1b7MBoDd62891lxntBj0=
+			2G7UTcBipwWbe/PbrgcH/ZHzPB777TfipAnlCzBBWrQ=
 			</data>
 		</dict>
 	</dict>

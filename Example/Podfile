@@ -1,15 +1,27 @@
+source 'https://github.com/CocoaPods/Specs.git'
 
+platform :ios, '12.0'
 use_frameworks!
-
-platform :ios, '9.0'
 
 target 'SHWVideoClipSDK_Example' do
   pod 'SHWVideoClipSDK', :path => '../'
   
   pod 'TZImagePickerController'
+  
+  pod 'ZFPlayer', '~> 4.0'
+  pod 'ZFPlayer/ControlView', '~> 4.0'
+  pod 'ZFPlayer/AVPlayer', '~> 4.0'
 
   target 'SHWVideoClipSDK_Tests' do
     inherit! :search_paths
 
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "12.0"
+    end
   end
 end

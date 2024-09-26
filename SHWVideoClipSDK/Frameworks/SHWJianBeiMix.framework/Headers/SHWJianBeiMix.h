@@ -18,7 +18,6 @@ FOUNDATION_EXPORT const unsigned char SHWJianBeiMixVersionString[];
 #import <SHWJianBeiMix/BPVideoFileHandler.h>
 #import <SHWJianBeiMix/BPFileUtil.h>
 #import <SHWJianBeiMix/BPCommonMethod.h>
-#import <SHWJianBeiMix/BPDownloader.h>
 #import <SHWJianBeiMix/BPVideoPlayer.h>
 #import <SHWJianBeiMix/BPMixModelTool.h>
 #import <SHWJianBeiMix/MgcCombineProvider.h>

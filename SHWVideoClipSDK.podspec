@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SHWVideoClipSDK'
-  s.version          = '0.1.1'
+  s.version          = '0.2.0'
   s.summary          = '视频剪辑.'
 
   s.description      = <<-DESC
@@ -31,11 +31,7 @@ A videoClip sdk.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
   
-  s.dependency 'AFNetworking'
   s.dependency 'SHWMixMobile',    '0.2.6'
-  s.dependency 'YYModel'
-  s.dependency 'Masonry'
-  s.dependency 'YYCategories'
   s.dependency 'Realm'
   s.dependency 'MJExtension'
   

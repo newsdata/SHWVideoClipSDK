@@ -14,7 +14,7 @@ A videoClip sdk.
   s.source           = { :git => 'https://github.com/newsdata/SHWVideoClipSDK.git', :tag => s.version.to_s }
   #s.source           = { :path => '.' }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'SHWVideoClipSDK/Classes/*.{h,m}'
   s.public_header_files = 'SHWVideoClipSDK/Classes/*.h'
